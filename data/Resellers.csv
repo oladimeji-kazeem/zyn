@@ -1,0 +1,702 @@
+ResellerKey,ResellerName,BusinessType,NumberEmployees,FirstOrderYear,ProductLine,AnnualSales,AnnualRevenue,YearOpened
+1,A Bike Store,Value Added Reseller,2,2011,Road,300000,30000,1974
+2,Progressive Sports,Specialty Bike Shop,10,2012,Mountain,800000,80000,1976
+3,Advanced Bike Components,Warehouse,40,2011,Road,1500000,150000,1978
+4,Modular Cycle Systems,Value Added Reseller,5,2011,Road,300000,30000,1980
+5,Metropolitan Sports Supply,Specialty Bike Shop,13,2012,Road,800000,80000,1982
+6,Aerobic Exercise Company,Warehouse,43,2013,Road,1500000,150000,1984
+7,Associated Bikes,Value Added Reseller,8,2011,Mountain,300000,30000,1986
+8,Exemplary Cycles,Specialty Bike Shop,16,2013,Touring,800000,80000,1988
+9,Tandem Bicycle Store,Warehouse,46,2012,Mountain,1500000,150000,1990
+10,Rural Cycle Emporium,Value Added Reseller,11,2012,Mountain,800000,80000,1992
+11,Sharp Bikes,Specialty Bike Shop,19,2011,Mountain,800000,80000,1994
+12,Bikes and Motorbikes,Warehouse,49,2012,Road,1500000,150000,1996
+13,Country Parts Shop,Value Added Reseller,14,NULL,Road,800000,80000,1998
+14,Bicycle Warehouse Inc.,Specialty Bike Shop,22,2013,Mountain,1000000,100000,2000
+15,Budget Toy Store,Warehouse,52,2013,Mountain,3000000,300000,2002
+16,Bulk Discount Store,Value Added Reseller,17,2012,Road,800000,80000,2004
+17,Trusted Catalog Store,Specialty Bike Shop,25,2010,Mountain,1000000,100000,2005
+18,Catalog Store,Warehouse,55,2011,Mountain,3000000,300000,2003
+19,Center Cycle Shop,Value Added Reseller,20,2012,Road,1000000,100000,2004
+20,Central Discount Store,Specialty Bike Shop,28,2011,Mountain,1000000,100000,1975
+21,Chic Department Stores,Warehouse,58,2012,Mountain,3000000,300000,2003
+22,Travel Systems,Value Added Reseller,19,2011,Road,800000,80000,1979
+23,Bike World,Specialty Bike Shop,31,2012,Mountain,1500000,150000,2002
+24,Eastside Department Store,Warehouse,61,2012,Road,3000000,300000,1983
+25,Coalition Bike Company,Value Added Reseller,18,2012,Mountain,800000,80000,2001
+26,Stylish Department Stores,Specialty Bike Shop,34,2011,Road,1500000,150000,1987
+27,Sports Sales and Rental,Warehouse,64,2010,Mountain,3000000,300000,2000
+28,Commuter Bicycle Store,Value Added Reseller,17,2013,Touring,800000,80000,1991
+29,Cross-Country Riding Supplies,Specialty Bike Shop,37,2011,Mountain,1500000,150000,1999
+30,Cycle Merchants,Warehouse,67,2012,Road,3000000,300000,1995
+31,Wheels Inc.,Value Added Reseller,16,2013,Road,800000,80000,1998
+32,Precision Gears Inc.,Specialty Bike Shop,40,NULL,Road,1500000,150000,1999
+33,Global Sports Outlet,Warehouse,70,2013,Mountain,3000000,300000,1997
+34,Cycles Wholesaler & Mfg.,Value Added Reseller,15,2012,Touring,800000,80000,2003
+35,Economic Parts Supply,Specialty Bike Shop,43,NULL,Road,1500000,150000,1996
+36,Exotic Bikes,Warehouse,73,2011,Road,3000000,300000,2002
+37,Two Bike Shops,Value Added Reseller,14,2012,Road,800000,80000,1995
+38,Finer Mart,Specialty Bike Shop,46,2013,Touring,1500000,150000,2001
+39,Fitness Hotel,Warehouse,76,2012,Road,3000000,300000,1994
+40,Journey Sporting Goods,Value Added Reseller,13,2011,Mountain,800000,80000,2000
+41,Distant Inn,Specialty Bike Shop,49,2011,Road,1500000,150000,1993
+42,Healthy Activity Store,Warehouse,79,NULL,Mountain,3000000,300000,1999
+43,Frugal Bike Shop,Value Added Reseller,12,2012,Mountain,800000,80000,1992
+44,Games and Sport Supply Company,Specialty Bike Shop,48,2013,Touring,1500000,150000,1998
+45,Every Bike Shop,Warehouse,80,2011,Road,3000000,300000,1991
+46,Gear-Shift Bikes Limited,Value Added Reseller,11,2012,Road,800000,80000,1997
+47,Greater Bike Store,Specialty Bike Shop,47,2011,Mountain,1500000,150000,1990
+48,Grand Industries,Warehouse,81,2013,Touring,3000000,300000,1996
+49,Neighborhood Bicycle Storehouse,Value Added Reseller,10,2013,Touring,800000,80000,1989
+50,Hometown Riding Supplies,Specialty Bike Shop,46,2013,Mountain,1500000,150000,1995
+51,Ideal Components,Warehouse,82,2013,Touring,3000000,300000,1988
+52,Instruments and Parts Company,Value Added Reseller,9,2013,Touring,300000,30000,1994
+53,Incomparable Bicycle Store,Specialty Bike Shop,45,2013,Touring,1500000,150000,1987
+54,Larger Cycle Shop,Warehouse,83,2011,Road,3000000,300000,1993
+55,Kickstands and Accessories Company,Value Added Reseller,8,2013,Touring,300000,30000,1986
+56,Latest Accessories Sales,Specialty Bike Shop,44,2012,Road,1500000,150000,1992
+57,Leading Sales & Repair,Warehouse,84,2011,Road,3000000,300000,1985
+58,Largest Bike Store,Value Added Reseller,7,2011,Road,300000,30000,1991
+59,Locks Company,Specialty Bike Shop,43,2013,Touring,1500000,150000,1984
+60,Main Bicycle Services,Warehouse,85,NULL,Road,3000000,300000,1990
+61,Many Bikes Store,Value Added Reseller,6,2012,Mountain,300000,30000,1983
+62,Manufacturers Inc,Specialty Bike Shop,42,2012,Road,1500000,150000,1989
+63,Metro Bike Mart,Warehouse,86,2011,Mountain,3000000,300000,1982
+64,Metal Clearing House,Value Added Reseller,5,2013,Touring,300000,30000,1988
+65,Metro Manufacturing,Specialty Bike Shop,41,2012,Mountain,1500000,150000,1981
+66,Neighborhood Store,Warehouse,87,2012,Road,3000000,300000,1987
+67,Self-Contained Cycle Parts Company,Value Added Reseller,4,2012,Road,300000,30000,1980
+68,North Bike Company,Specialty Bike Shop,40,2013,Road,1500000,150000,1986
+69,Online Bike Catalog,Warehouse,88,2013,Touring,3000000,300000,1979
+70,Outdoor Aerobic Systems Company,Value Added Reseller,3,2013,Road,300000,30000,1985
+71,Outdoor Distributors,Specialty Bike Shop,39,NULL,Mountain,1500000,150000,1978
+72,Outdoor Equipment Store,Warehouse,89,2012,Road,3000000,300000,1984
+73,Outdoor Sports Supply,Value Added Reseller,2,2011,Mountain,300000,30000,1977
+74,Parcel Express Delivery Service,Specialty Bike Shop,38,2011,Road,1500000,150000,1983
+75,Paint Supply,Warehouse,90,2011,Mountain,3000000,300000,1976
+76,Out-of-the-Way Hotels,Value Added Reseller,4,NULL,Mountain,300000,30000,1982
+77,Mechanical Products Ltd.,Specialty Bike Shop,37,2012,Road,1500000,150000,1975
+78,Preferred Bikes,Warehouse,91,2011,Road,3000000,300000,1981
+79,Reasonable Bicycle Sales,Value Added Reseller,6,2012,Road,300000,30000,1974
+80,Racks and Security Systems,Specialty Bike Shop,36,2013,Touring,1500000,150000,1980
+81,Rally Day Mall,Warehouse,92,2011,Road,3000000,300000,1991
+82,Refined Department Stores,Value Added Reseller,8,NULL,Road,300000,30000,1979
+83,Requisite Part Supply,Specialty Bike Shop,35,2010,Road,1500000,150000,1992
+84,Rewarding Activities Company,Warehouse,93,2011,Road,3000000,300000,1978
+85,Roadway Bicycle Supply,Value Added Reseller,10,2013,Touring,800000,80000,1974
+86,Bicycle Exporters,Specialty Bike Shop,34,2012,Touring,1500000,150000,1976
+87,Rich Department Store,Warehouse,94,2013,Touring,3000000,300000,1978
+88,Closest Bicycle Store,Value Added Reseller,12,2013,Mountain,800000,80000,1980
+89,Riverside Company,Specialty Bike Shop,33,2012,Road,1500000,150000,1982
+90,Sales and Supply Company,Warehouse,95,2012,Road,3000000,300000,1984
+91,Scooters and Bikes Store,Value Added Reseller,14,2011,Road,800000,80000,1986
+92,Sports Commodities,Specialty Bike Shop,32,2011,Mountain,1500000,150000,1988
+93,Stationary Bikes and Stands,Warehouse,96,2011,Road,3000000,300000,1990
+94,Specialty Sports Store,Value Added Reseller,16,2011,Mountain,800000,80000,1992
+95,Rural Department Store,Specialty Bike Shop,31,2012,Touring,1500000,150000,1994
+96,More Bikes!,Warehouse,97,2011,Road,3000000,300000,1996
+97,Mountain Bike Center,Value Added Reseller,18,2012,Road,800000,80000,1998
+98,Superlative Bikes,Specialty Bike Shop,30,2012,Mountain,1500000,150000,2000
+99,Unified Sports Company,Warehouse,98,2011,Mountain,3000000,300000,2002
+100,Up-To-Date Sports,Value Added Reseller,20,2013,Mountain,1000000,100000,2004
+101,Urban Sports Emporium,Specialty Bike Shop,29,2012,Road,1000000,100000,2005
+102,National Manufacturing,Warehouse,99,2011,Road,3000000,300000,2003
+103,The Bike Outlet,Value Added Reseller,19,2013,Touring,800000,80000,2004
+104,Very Best Sports Supply,Specialty Bike Shop,28,2013,Road,1000000,100000,1975
+105,Volume Bike Sellers,Warehouse,100,NULL,Mountain,3000000,300000,2003
+106,West Side Mart,Value Added Reseller,18,2013,Touring,800000,80000,1979
+107,Wholesale Bikes,Specialty Bike Shop,27,2011,Road,1000000,100000,2002
+108,Wheelsets Storehouse,Warehouse,66,2012,Road,3000000,300000,1983
+109,Travel Sports,Value Added Reseller,17,2013,Mountain,800000,80000,2001
+110,Vintage Sport Boutique,Value Added Reseller,2,2012,Touring,300000,30000,1974
+111,Westside Cycle Store,Specialty Bike Shop,10,2011,Road,800000,80000,1976
+112,Town Industries,Warehouse,40,2013,Touring,1500000,150000,1978
+113,Trendy Department Stores,Value Added Reseller,5,2013,Touring,300000,30000,1980
+114,Two Wheels Cycle Store,Specialty Bike Shop,13,2011,Road,800000,80000,1982
+115,Security Racks and Locks Wholesalers,Warehouse,43,2012,Mountain,1500000,150000,1984
+116,Retirement Activities Association,Value Added Reseller,8,2011,Road,300000,30000,1986
+117,Pedals Warehouse,Specialty Bike Shop,16,2010,Road,800000,80000,1988
+118,Rapid Bikes,Warehouse,46,2011,Mountain,1500000,150000,1990
+119,Red Bicycle Company,Value Added Reseller,11,2010,Mountain,800000,80000,1992
+120,Machines & Cycles Store,Specialty Bike Shop,19,2012,Touring,800000,80000,1994
+121,Metro Sports Equipment,Warehouse,49,2012,Mountain,1500000,150000,1996
+122,Off-Price Bike Center,Value Added Reseller,14,2013,Touring,800000,80000,1998
+123,First Supplies,Specialty Bike Shop,22,2012,Touring,1000000,100000,2000
+124,Nearby Sporting Goods,Warehouse,52,2012,Road,3000000,300000,2002
+125,Immediate Repair Shop,Value Added Reseller,17,2011,Mountain,800000,80000,2004
+126,Famous Bike Sales and Service,Specialty Bike Shop,25,2011,Road,1000000,100000,2005
+127,Front Sporting Goods,Warehouse,55,2012,Mountain,3000000,300000,2003
+128,Demand Distributors,Value Added Reseller,20,2011,Road,1000000,100000,2004
+129,Discount Bicycle Specialists,Specialty Bike Shop,28,2011,Road,1000000,100000,1975
+130,Elite Bikes,Warehouse,58,2012,Road,3000000,300000,2003
+131,Eighth Bike Store,Value Added Reseller,19,2013,Touring,800000,80000,1979
+132,Another Sporting Goods Company,Specialty Bike Shop,31,NULL,Road,1500000,150000,2002
+133,Commercial Sporting Goods,Warehouse,61,2012,Mountain,3000000,300000,1983
+134,Budget Bike Company,Value Added Reseller,18,2013,Road,800000,80000,2001
+135,Wonderful Bikes Inc.,Specialty Bike Shop,34,2012,Road,1500000,150000,1987
+136,Wholesale Parts,Warehouse,64,2011,Road,3000000,300000,2000
+137,Transportation Options,Value Added Reseller,17,2011,Mountain,800000,80000,1991
+138,South Bike Company,Specialty Bike Shop,37,2013,Touring,1500000,150000,1999
+139,Steel Inc.,Warehouse,67,2011,Road,3000000,300000,1995
+140,Teen Discount Store,Value Added Reseller,16,NULL,Mountain,800000,80000,1998
+141,Rental Gallery,Specialty Bike Shop,40,2013,Mountain,1500000,150000,1999
+142,Riding Cycles,Warehouse,70,2013,Road,3000000,300000,1997
+143,Modern Bike Store,Value Added Reseller,15,2011,Road,800000,80000,2003
+144,Only Bikes and Accessories,Specialty Bike Shop,43,2011,Mountain,1500000,150000,1996
+145,Raw Materials Inc,Warehouse,73,2011,Mountain,3000000,300000,2002
+146,Latest Sports Equipment,Value Added Reseller,14,2010,Mountain,800000,80000,1995
+147,Local Hardware Factory,Specialty Bike Shop,46,2012,Road,1500000,150000,2001
+148,Lots of Bikes Storehouse,Warehouse,76,2011,Mountain,3000000,300000,1994
+149,Initial Bike Company,Value Added Reseller,13,2012,Mountain,800000,80000,2000
+150,Fleet Bikes,Specialty Bike Shop,49,2012,Mountain,1500000,150000,1993
+151,Futuristic Bikes,Warehouse,79,2012,Mountain,3000000,300000,1999
+152,Distance Bikes,Value Added Reseller,12,2012,Road,800000,80000,1992
+153,Widget Bicycle Specialists,Specialty Bike Shop,48,2013,Road,1500000,150000,1998
+154,Camping and Sports Store,Warehouse,80,2013,Touring,3000000,300000,1991
+155,Corner Bicycle Supply,Value Added Reseller,11,2011,Road,800000,80000,1997
+156,Metal Processing Company,Specialty Bike Shop,47,2011,Road,1500000,150000,1990
+157,Ace Bicycle Supply,Warehouse,81,2012,Mountain,3000000,300000,1996
+158,Rural Sporting Goods,Value Added Reseller,10,NULL,Road,800000,80000,1989
+159,Uncompromising Quality Co,Specialty Bike Shop,46,2013,Touring,1500000,150000,1995
+160,Vigorous Sports Store,Warehouse,82,2012,Road,3000000,300000,1988
+161,Weekend Tours,Value Added Reseller,9,2010,Road,300000,30000,1994
+162,Tire Company,Specialty Bike Shop,45,2011,Road,1500000,150000,1987
+163,Sports Merchandise,Warehouse,83,2013,Touring,3000000,300000,1993
+164,Suburban Cycle Shop,Value Added Reseller,8,2011,Mountain,300000,30000,1986
+165,Third Bike Store,Specialty Bike Shop,44,2012,Road,1500000,150000,1992
+166,Fitness Toy Store,Warehouse,84,2010,Road,3000000,300000,1985
+167,Farthermost Bike Shop,Value Added Reseller,7,2011,Road,300000,30000,1991
+168,Economy Bikes Company,Specialty Bike Shop,43,2012,Mountain,1500000,150000,1984
+169,Downtown Hotel,Warehouse,85,2011,Mountain,3000000,300000,1990
+170,Excellent Riding Supplies,Value Added Reseller,6,2011,Road,300000,30000,1983
+171,Eighty Toy Stores,Specialty Bike Shop,42,2013,Road,1500000,150000,1989
+172,Certified Sports Supply,Warehouse,86,2011,Mountain,3000000,300000,1982
+173,Sundry Sporting Goods,Value Added Reseller,5,2011,Road,300000,30000,1988
+174,Toy Manufacturing Inc,Specialty Bike Shop,41,NULL,Road,1500000,150000,1981
+175,Registered Cycle Store,Warehouse,87,2012,Mountain,3000000,300000,1987
+176,Rodeway Bike Store,Value Added Reseller,4,2013,Mountain,300000,30000,1980
+177,Plastic Products Manufacturers,Specialty Bike Shop,40,2012,Touring,1500000,150000,1986
+178,Rampart Amusement Company,Warehouse,88,2013,Touring,3000000,300000,1979
+179,Fourth Bike Store,Value Added Reseller,3,2013,Touring,300000,30000,1985
+180,Full-Service Bike Store,Specialty Bike Shop,39,2011,Mountain,1500000,150000,1978
+181,Family Entertainment Center,Warehouse,89,2013,Touring,3000000,300000,1984
+182,Another Bicycle Company,Value Added Reseller,2,2013,Touring,300000,30000,1977
+183,This Area Sporting Goods,Specialty Bike Shop,38,2011,Mountain,1500000,150000,1983
+184,Go-cart and Bike Specialists,Warehouse,90,2011,Mountain,3000000,300000,1976
+185,Weekend Bike Tours,Value Added Reseller,4,2012,Road,300000,30000,1982
+186,Thrilling Bike Tours,Specialty Bike Shop,37,2013,Touring,1500000,150000,1975
+187,Trailblazing Sports,Warehouse,91,2011,Mountain,3000000,300000,1981
+188,Variety Bike Outlet,Value Added Reseller,6,NULL,Mountain,300000,30000,1974
+189,Principal Bicycle Supply,Specialty Bike Shop,36,NULL,Road,1500000,150000,1980
+190,Racing Partners,Warehouse,92,2013,Mountain,3000000,300000,1991
+191,Non-Slip Pedal Company,Value Added Reseller,8,2011,Road,300000,30000,1979
+192,Nuts and Bolts Mfg.,Specialty Bike Shop,35,NULL,Mountain,1500000,150000,1992
+193,Perfect Toys,Warehouse,93,2013,Touring,3000000,300000,1978
+194,Mechanical Brake Manufacturers,Value Added Reseller,10,NULL,Touring,800000,80000,1974
+195,Inexpensive Parts Shop,Specialty Bike Shop,34,2013,Mountain,1500000,150000,1976
+196,Exhibition Showroom,Warehouse,94,2012,Mountain,3000000,300000,1978
+197,"Fabrikam Inc., West",Value Added Reseller,12,2012,Mountain,800000,80000,1980
+198,Field Trip Inc,Specialty Bike Shop,33,2011,Road,1500000,150000,1982
+199,Authorized Bike Sales and Rental,Warehouse,95,2013,Touring,3000000,300000,1984
+200,Basic Bike Company,Value Added Reseller,14,2010,Road,800000,80000,1986
+201,Unsurpassed Bikes,Specialty Bike Shop,32,2013,Touring,1500000,150000,1988
+202,Two-Seater Bikes,Warehouse,96,2013,Touring,3000000,300000,1990
+203,Separate Parts Corporation,Value Added Reseller,16,2010,Road,800000,80000,1992
+204,Traction Tire Company,Specialty Bike Shop,31,NULL,Mountain,1500000,150000,1994
+205,Rally Master Company Inc,Warehouse,97,2012,Touring,3000000,300000,1996
+206,New and Used Bicycles,Value Added Reseller,18,2011,Road,800000,80000,1998
+207,Lubricant and Grease Suppliers,Specialty Bike Shop,30,2012,Mountain,1500000,150000,2000
+208,Professional Cyclists,Warehouse,98,2011,Road,3000000,300000,2002
+209,Purple Bicycle Company,Value Added Reseller,20,NULL,Road,1000000,100000,2004
+210,Gasless Cycle Shop,Specialty Bike Shop,29,2011,Road,1000000,100000,2005
+211,Sports Products Store,Warehouse,99,2012,Road,3000000,300000,2003
+212,Enterprise Center,Value Added Reseller,19,2013,Touring,800000,80000,2004
+213,Fast Bike Works,Specialty Bike Shop,28,2013,Touring,1000000,100000,1975
+214,Exclusive Bicycle Mart,Warehouse,100,2012,Road,3000000,300000,2003
+215,Eleventh Bike Store,Value Added Reseller,18,2011,Road,800000,80000,1979
+216,Painters Bicycle Specialists,Specialty Bike Shop,27,2011,Road,1000000,100000,2002
+217,City Manufacturing,Warehouse,66,2012,Mountain,3000000,300000,1983
+218,Sure & Reliable Sporting Goods,Value Added Reseller,17,2011,Road,800000,80000,2001
+219,Extras Sporting Goods,Value Added Reseller,2,2012,Road,300000,30000,1974
+220,Best o' Bikes,Specialty Bike Shop,10,2012,Touring,800000,80000,1976
+221,Bike Dealers Association,Warehouse,40,2010,Road,1500000,150000,1978
+222,Sample Bike Store,Value Added Reseller,5,2011,Road,300000,30000,1980
+223,Paints and Solvents Company,Specialty Bike Shop,13,2013,Touring,800000,80000,1982
+224,Pedal Systems Company,Warehouse,43,2012,Road,1500000,150000,1984
+225,Optimal Bikes,Value Added Reseller,8,2012,Road,300000,30000,1986
+226,Leisure Activities,Specialty Bike Shop,16,2012,Mountain,800000,80000,1988
+227,"Health Spa, Limited",Warehouse,46,2010,Road,1500000,150000,1990
+228,Home Town Bike Store,Value Added Reseller,11,2013,Touring,800000,80000,1992
+229,Instant Cycle Store,Specialty Bike Shop,19,2011,Road,800000,80000,1994
+230,Global Bike Retailers,Warehouse,49,2013,Touring,1500000,150000,1996
+231,Helmets and Cycles,Value Added Reseller,14,2012,Touring,800000,80000,1998
+232,Exceptional Cycle Services,Specialty Bike Shop,22,2012,Touring,1000000,100000,2000
+233,Fashionable Department Stores,Warehouse,52,2012,Mountain,3000000,300000,2002
+234,Eastside Sporting Goods,Value Added Reseller,17,2011,Road,800000,80000,2004
+235,Certified Bicycle Supply,Specialty Bike Shop,25,2012,Road,1000000,100000,2005
+236,Closeout Boutique,Warehouse,55,2012,Mountain,3000000,300000,2003
+237,Client Discount Store,Value Added Reseller,20,2012,Mountain,1000000,100000,2004
+238,A Great Bicycle Company,Specialty Bike Shop,28,2011,Road,1000000,100000,1975
+239,Bicycle Merchandise Warehouse,Warehouse,58,2012,Road,3000000,300000,2003
+240,Wire Baskets and Parts,Value Added Reseller,19,2011,Road,800000,80000,1979
+241,Vale Riding Supplies,Specialty Bike Shop,31,2012,Touring,1500000,150000,2002
+242,Spoke Manufacturers,Warehouse,61,2011,Road,3000000,300000,1983
+243,Recreation Supplies,Value Added Reseller,18,2012,Mountain,800000,80000,2001
+244,Retail Discount Store,Specialty Bike Shop,34,2013,Road,1500000,150000,1987
+245,Leather Seat Factory,Warehouse,64,2011,Mountain,3000000,300000,2000
+246,Large Bike Shop,Value Added Reseller,17,2011,Mountain,800000,80000,1991
+247,Major Amusement Company,Specialty Bike Shop,37,2012,Mountain,1500000,150000,1999
+248,Good Bicycle Store,Warehouse,67,2013,Road,3000000,300000,1995
+249,Helpful Sales and Repair Service,Value Added Reseller,16,2013,Touring,800000,80000,1998
+250,Express Bike Services,Specialty Bike Shop,40,2013,Mountain,1500000,150000,1999
+251,Endurance Bikes,Warehouse,70,2013,Road,3000000,300000,1997
+252,Classic Cycle Store,Value Added Reseller,15,2011,Mountain,800000,80000,2003
+253,Roving Sports,Specialty Bike Shop,43,2011,Road,1500000,150000,1996
+254,Safe Cycles Shop,Warehouse,73,2012,Mountain,3000000,300000,2002
+255,Swift Cycles,Value Added Reseller,14,2011,Road,800000,80000,1995
+256,Rental Bikes,Specialty Bike Shop,46,2011,Road,1500000,150000,2001
+257,Number 1 Supply,Warehouse,76,2012,Road,3000000,300000,1994
+258,Quantity Discounts,Value Added Reseller,13,2012,Road,800000,80000,2000
+259,Highway Bike Shop,Specialty Bike Shop,49,2011,Road,1500000,150000,1993
+260,Industrial Supplies,Warehouse,79,2013,Touring,3000000,300000,1999
+261,Functional Store North,Value Added Reseller,12,NULL,Mountain,800000,80000,1992
+262,General Industries,Specialty Bike Shop,48,2012,Road,1500000,150000,1998
+263,Farthest Bike Store,Warehouse,80,2013,Touring,3000000,300000,1991
+264,Fasteners & Bolts Outlet,Value Added Reseller,11,2013,Touring,800000,80000,1997
+265,Full Sports Supply,Specialty Bike Shop,47,2011,Mountain,1500000,150000,1990
+266,Excellent Bikes,Warehouse,81,2013,Touring,3000000,300000,1996
+267,Cycle Parts and Accessories,Value Added Reseller,10,2013,Touring,800000,80000,1989
+268,Channel Outlet,Specialty Bike Shop,46,2013,Touring,1500000,150000,1995
+269,Curbside Universe,Warehouse,82,2010,Road,3000000,300000,1988
+270,Active Transport Inc.,Value Added Reseller,9,2011,Road,300000,30000,1994
+271,Alternative Vehicles,Specialty Bike Shop,45,2011,Road,1500000,150000,1987
+272,Metro Cycle Shop,Warehouse,83,2011,Mountain,3000000,300000,1993
+273,A Typical Bike Shop,Value Added Reseller,8,2011,Road,300000,30000,1986
+274,Active Systems,Specialty Bike Shop,44,2011,Road,1500000,150000,1992
+275,Outdoor Sporting Goods,Warehouse,84,2012,Touring,3000000,300000,1985
+276,Thrifty Parts and Sales,Value Added Reseller,7,2013,Road,300000,30000,1991
+277,The Bicycle Accessories Company,Specialty Bike Shop,43,2012,Road,1500000,150000,1984
+278,Tread Industries,Warehouse,85,2011,Mountain,3000000,300000,1990
+279,Reliable Brake Systems,Value Added Reseller,6,2011,Mountain,300000,30000,1983
+280,Standard Bikes,Specialty Bike Shop,42,2012,Mountain,1500000,150000,1989
+281,Petroleum Products Distributors,Warehouse,86,2013,Touring,3000000,300000,1982
+282,Quick Parts and Service,Value Added Reseller,5,2013,Touring,300000,30000,1988
+283,Racing Supply Distributors,Specialty Bike Shop,41,2013,Touring,1500000,150000,1981
+284,Nearby Bike Mall,Warehouse,87,2013,Road,3000000,300000,1987
+285,Nearest Bike Store,Value Added Reseller,4,2013,Touring,300000,30000,1980
+286,Number One Bike Co.,Specialty Bike Shop,40,2011,Road,1500000,150000,1986
+287,Handy Bike Services,Warehouse,88,2011,Mountain,3000000,300000,1979
+288,Kickstand Sellers,Value Added Reseller,3,2012,Mountain,300000,30000,1985
+289,Moderately-Priced Bikes Store,Specialty Bike Shop,39,2011,Mountain,1500000,150000,1978
+290,Friendly Bike Shop,Warehouse,89,2011,Road,3000000,300000,1984
+291,Grand Bicycle Stores,Value Added Reseller,2,2012,Mountain,300000,30000,1977
+292,Grease and Oil Products Company,Specialty Bike Shop,38,2010,Road,1500000,150000,1983
+293,Fashionable Bikes and Accessories,Warehouse,90,2011,Mountain,3000000,300000,1976
+294,Flawless Bike Shop,Value Added Reseller,4,NULL,Road,300000,30000,1982
+295,Engineered Bike Systems,Specialty Bike Shop,37,2013,Touring,1500000,150000,1975
+296,Extreme Toy Store,Warehouse,91,2012,Mountain,3000000,300000,1981
+297,Blue-Ribbon Bike Company,Value Added Reseller,6,2013,Touring,300000,30000,1974
+298,City Cycling,Specialty Bike Shop,36,NULL,Road,1500000,150000,1980
+299,Citywide Service and Repair,Warehouse,92,2011,Road,3000000,300000,1991
+300,Nice Bikes,Value Added Reseller,8,2012,Road,300000,30000,1979
+301,Rural Mountain Bike Mart,Specialty Bike Shop,35,2012,Road,1500000,150000,1992
+302,Best Cycle Store,Warehouse,93,2012,Touring,3000000,300000,1978
+303,Seaside Bike Works,Value Added Reseller,10,2013,Touring,800000,80000,1974
+304,Essential Bike Works,Specialty Bike Shop,34,2013,Road,1500000,150000,1976
+305,Professional Sporting Goods,Warehouse,94,2012,Touring,3000000,300000,1978
+306,Work and Play Association,Value Added Reseller,12,2012,Road,800000,80000,1980
+307,Riding Associates,Specialty Bike Shop,33,2013,Mountain,1500000,150000,1982
+308,Rugged Bikes,Warehouse,95,2013,Touring,3000000,300000,1984
+309,The Gear Store,Value Added Reseller,14,2011,Mountain,800000,80000,1986
+310,Orange Bicycle Company,Specialty Bike Shop,32,2012,Road,1500000,150000,1988
+311,Principal Bike Company,Warehouse,96,2012,Road,3000000,300000,1990
+312,Resale Services,Value Added Reseller,16,2011,Mountain,800000,80000,1992
+313,Metropolitan Manufacturing,Specialty Bike Shop,31,2011,Road,1500000,150000,1994
+314,One-Piece Handle Bars,Warehouse,97,2011,Mountain,3000000,300000,1996
+315,Juvenile Sports Equipment,Value Added Reseller,18,2010,Mountain,800000,80000,1998
+316,Low Price Cycles,Specialty Bike Shop,30,2013,Mountain,1500000,150000,2000
+317,Finer Riding Supplies,Warehouse,98,2011,Road,3000000,300000,2002
+318,First-Rate Outlet,Value Added Reseller,20,2011,Road,1000000,100000,2004
+319,Cycles Sales and Repair,Specialty Bike Shop,29,2013,Touring,1000000,100000,2005
+320,Amalgamated Parts Shop,Warehouse,99,2012,Touring,3000000,300000,2003
+321,Second Bike Shop,Value Added Reseller,19,2013,Road,800000,80000,2004
+322,Tachometers and Accessories,Specialty Bike Shop,28,2012,Mountain,1000000,100000,1975
+323,Metro Bike Works,Warehouse,100,2012,Mountain,3000000,300000,2003
+324,A Bicycle Association,Value Added Reseller,18,NULL,Touring,800000,80000,1979
+325,All Cycle Shop,Specialty Bike Shop,27,2011,Mountain,1000000,100000,2002
+326,Year-Round Sports,Warehouse,66,2011,Mountain,3000000,300000,1983
+327,World of Bikes,Value Added Reseller,17,2012,Mountain,800000,80000,2001
+328,Totes & Baskets Company,Value Added Reseller,2,2011,Road,300000,30000,1974
+329,"Unicycles, Bicycles, and Tricycles",Specialty Bike Shop,10,NULL,Touring,800000,80000,1976
+330,The New Bike Store,Warehouse,40,2011,Road,1500000,150000,1978
+331,Technical Parts Manufacturing,Value Added Reseller,5,2012,Touring,300000,30000,1980
+332,Topnotch Bikes,Specialty Bike Shop,13,NULL,Mountain,800000,80000,1982
+333,Resident Cycle Shop,Warehouse,43,NULL,Mountain,1500000,150000,1984
+334,Retreat Inn,Value Added Reseller,8,2012,Road,300000,30000,1986
+335,Scratch-Resistant Finishes Company,Specialty Bike Shop,16,2011,Mountain,800000,80000,1988
+336,Primary Bike Distributors,Warehouse,46,2011,Road,1500000,150000,1990
+337,Recreation Toy Store,Value Added Reseller,11,2011,Mountain,800000,80000,1992
+338,Rambling Tours,Specialty Bike Shop,19,2013,Touring,800000,80000,1994
+339,Major Bicycle Store,Warehouse,49,2013,Touring,1500000,150000,1996
+340,Nearby Cycle Shop,Value Added Reseller,14,2012,Mountain,800000,80000,1998
+341,Independent Outlet,Specialty Bike Shop,22,NULL,Road,1000000,100000,2000
+342,Leather and Vinyl Manufacturing,Warehouse,52,2011,Road,3000000,300000,2002
+343,Mail-Order Outlet,Value Added Reseller,17,2012,Road,800000,80000,2004
+344,Fifth Bike Store,Specialty Bike Shop,25,2010,Road,1000000,100000,2005
+345,Genial Bike Associates,Warehouse,55,2012,Mountain,3000000,300000,2003
+346,Great Bicycle Supply,Value Added Reseller,20,2011,Mountain,1000000,100000,2004
+347,Bike Universe,Specialty Bike Shop,28,NULL,Mountain,1000000,100000,1975
+348,Bold Bike Accessories,Warehouse,58,2011,Mountain,3000000,300000,2003
+349,Exercise Center,Value Added Reseller,19,2012,Mountain,800000,80000,1979
+350,Mountain Emporium,Specialty Bike Shop,31,2012,Mountain,1500000,150000,2002
+351,Acclaimed Bicycle Company,Warehouse,61,2013,Touring,3000000,300000,1983
+352,Twelfth Bike Store,Value Added Reseller,18,2012,Mountain,800000,80000,2001
+353,Two-Wheeled Transit Company,Specialty Bike Shop,34,2011,Mountain,1500000,150000,1987
+354,Serious Cycles,Warehouse,64,2011,Mountain,3000000,300000,2000
+355,Spare Parts Co.,Value Added Reseller,17,2011,Mountain,800000,80000,1991
+356,Speedometer Sales,Specialty Bike Shop,37,NULL,Road,1500000,150000,1999
+357,Quality Bike Sales,Warehouse,67,2013,Touring,3000000,300000,1995
+358,Mail Market,Value Added Reseller,16,2013,Touring,800000,80000,1998
+359,Mechanical Sports Center,Specialty Bike Shop,40,2012,Road,1500000,150000,1999
+360,Novelty Bikes,Warehouse,70,2013,Touring,3000000,300000,1997
+361,Fitness Supplies,Value Added Reseller,15,2013,Touring,800000,80000,2003
+362,Grand Cycle Store,Specialty Bike Shop,43,NULL,Road,1500000,150000,1996
+363,Immense Manufacturing Company,Warehouse,73,2013,Touring,3000000,300000,2002
+364,District Mall,Value Added Reseller,14,2011,Road,800000,80000,1995
+365,Distinctive Store,Specialty Bike Shop,46,2011,Road,1500000,150000,2001
+366,Extended Bike Sales,Warehouse,76,2011,Mountain,3000000,300000,1994
+367,Brown Bicycle Company,Value Added Reseller,13,NULL,Road,800000,80000,2000
+368,Elemental Sporting Goods,Specialty Bike Shop,49,2011,Mountain,1500000,150000,1993
+369,Distinctive Cycles Sales & Service,Warehouse,79,2011,Mountain,3000000,300000,1999
+370,Acceptable Sales & Service,Value Added Reseller,12,2011,Road,800000,80000,1992
+371,Custom Sales and Service,Specialty Bike Shop,48,NULL,Road,1500000,150000,1998
+372,Top Bike Market,Warehouse,80,2013,Touring,3000000,300000,1991
+373,Township Inn,Value Added Reseller,11,NULL,Road,800000,80000,1997
+374,Major Equipment Co,Specialty Bike Shop,47,NULL,Touring,1500000,150000,1990
+375,Region Bike Company,Warehouse,81,NULL,Road,3000000,300000,1996
+376,Commerce Bicycle Specialists,Value Added Reseller,10,2012,Mountain,800000,80000,1989
+377,Grand Sport Boutique,Specialty Bike Shop,46,2012,Road,1500000,150000,1995
+378,Grown-up Bike Store,Warehouse,82,2013,Mountain,3000000,300000,1988
+379,Fad Outlet,Value Added Reseller,9,2012,Road,300000,30000,1994
+380,First Department Stores,Specialty Bike Shop,45,2011,Mountain,1500000,150000,1987
+381,Bicycle Lines Distributors,Warehouse,83,2012,Mountain,3000000,300000,1993
+382,Beneficial Exercises and Activities,Value Added Reseller,8,2012,Road,300000,30000,1986
+383,Vehicle Shop,Specialty Bike Shop,44,2011,Road,1500000,150000,1992
+384,Sparkling Paint and Finishes,Warehouse,84,2011,Mountain,3000000,300000,1985
+385,Sturdy Toys,Value Added Reseller,7,2011,Mountain,300000,30000,1991
+386,Touring Services,Specialty Bike Shop,43,2011,Road,1500000,150000,1984
+387,Racing Association,Warehouse,85,2011,Road,3000000,300000,1990
+388,Road Way Sales and Rental,Value Added Reseller,6,2012,Mountain,300000,30000,1983
+389,Sixth Bike Store,Specialty Bike Shop,42,2011,Mountain,1500000,150000,1989
+390,Plastic Parts Company,Warehouse,86,2011,Mountain,3000000,300000,1982
+391,Pretty Bikes and Toys,Value Added Reseller,5,2013,Road,300000,30000,1988
+392,Primary Cycle Shop,Specialty Bike Shop,41,2012,Road,1500000,150000,1981
+393,Gears and Parts Company,Warehouse,87,2013,Touring,3000000,300000,1987
+394,Little Sports Center,Value Added Reseller,4,NULL,Touring,300000,30000,1980
+395,Online Bike Sellers,Specialty Bike Shop,40,2012,Mountain,1500000,150000,1986
+396,Executive Gift Store,Warehouse,88,2012,Mountain,3000000,300000,1979
+397,Capable Sales and Service,Value Added Reseller,3,2010,Mountain,300000,30000,1985
+398,Commendable Bikes,Specialty Bike Shop,39,2011,Road,1500000,150000,1978
+399,Big Cycle Mall,Warehouse,89,2013,Touring,3000000,300000,1984
+400,Local Sales and Rental,Value Added Reseller,2,2013,Touring,300000,30000,1977
+401,Brightwork Company,Specialty Bike Shop,38,2011,Mountain,1500000,150000,1983
+402,Pro Sporting Goods,Warehouse,90,NULL,Mountain,3000000,300000,1976
+403,Affordable Sports Equipment,Value Added Reseller,4,2011,Road,300000,30000,1982
+404,Activity Center,Specialty Bike Shop,37,2011,Road,1500000,150000,1975
+405,Sporting Goods and Bicycle Shop,Warehouse,91,NULL,Road,3000000,300000,1981
+406,The Commissary,Value Added Reseller,6,2012,Road,300000,30000,1974
+407,Workout Emporium,Specialty Bike Shop,36,2013,Touring,1500000,150000,1980
+408,Odometers and Accessories Company,Warehouse,92,2013,Touring,3000000,300000,1991
+409,Outdoor Toy Store,Value Added Reseller,8,NULL,Mountain,300000,30000,1979
+410,Pedaling Components,Specialty Bike Shop,35,2013,Touring,1500000,150000,1992
+411,Kids and Adults Cycle Shop,Warehouse,93,2013,Mountain,3000000,300000,1978
+412,Leisure Clearing House,Value Added Reseller,10,2012,Road,800000,80000,1974
+413,Margie's Travel,Specialty Bike Shop,34,NULL,Mountain,1500000,150000,1976
+414,Grand Discount Store,Warehouse,94,2011,Mountain,3000000,300000,1978
+415,Imaginary Toys,Value Added Reseller,12,NULL,Touring,800000,80000,1980
+416,Impromptu Trips,Specialty Bike Shop,33,NULL,Mountain,1500000,150000,1982
+417,Genuine Bike Shop,Warehouse,95,2011,Road,3000000,300000,1984
+418,Good Bike Shop,Value Added Reseller,14,2011,Road,800000,80000,1986
+419,Exertion Activities Club,Specialty Bike Shop,32,NULL,Touring,1500000,150000,1988
+420,Extreme Riding Supplies,Warehouse,96,2013,Touring,3000000,300000,1990
+421,Fitness Cycling,Value Added Reseller,16,2012,Mountain,800000,80000,1992
+422,Consolidated Sales,Specialty Bike Shop,31,2011,Mountain,1500000,150000,1994
+423,Bike Rims Company,Warehouse,97,2010,Road,3000000,300000,1996
+424,Bikes for Two,Value Added Reseller,18,2012,Mountain,800000,80000,1998
+425,Bikes for Kids and Adults,Specialty Bike Shop,30,2011,Mountain,1500000,150000,2000
+426,Custom Accessories Company,Warehouse,98,2012,Road,3000000,300000,2002
+427,Atypical Bike Company,Value Added Reseller,20,2013,Road,1000000,100000,2004
+428,West Wind Distributors,Specialty Bike Shop,29,2013,Touring,1000000,100000,2005
+429,Unusual Bicycle Company,Warehouse,99,2012,Touring,3000000,300000,2003
+430,Uttermost Bike Shop,Value Added Reseller,19,2012,Road,800000,80000,2004
+431,Small Cycle Store,Specialty Bike Shop,28,2010,Road,1000000,100000,1975
+432,Super Sports Store,Warehouse,100,2011,Road,3000000,300000,2003
+433,Thorough Parts and Repair Services,Value Added Reseller,18,2011,Road,800000,80000,1979
+434,Road-Way Mart,Specialty Bike Shop,27,2012,Mountain,1000000,100000,2002
+435,Satin Finish Company,Warehouse,66,2012,Mountain,3000000,300000,1983
+436,Sheet Metal Manufacturing,Value Added Reseller,17,2012,Road,800000,80000,2001
+437,Professional Cycle Store,Value Added Reseller,2,2011,Mountain,300000,30000,1974
+438,Remarkable Bike Store,Specialty Bike Shop,10,2011,Road,800000,80000,1976
+439,Regional Manufacturing,Warehouse,40,2011,Mountain,1500000,150000,1978
+440,Hobby Store,Value Added Reseller,5,2011,Mountain,300000,30000,1980
+441,Leading Bike Distributors,Specialty Bike Shop,13,2013,Road,800000,80000,1982
+442,Original Bicycle Supply Company,Warehouse,43,2010,Mountain,1500000,150000,1984
+443,Courteous Bicycle Specialists,Value Added Reseller,8,2013,Touring,300000,30000,1986
+444,Finer Cycle Shop,Specialty Bike Shop,16,2012,Mountain,800000,80000,1988
+445,First Center,Warehouse,46,2013,Mountain,1500000,150000,1990
+446,Fitness Toys,Value Added Reseller,11,2013,Touring,800000,80000,1992
+447,Cross-town Parts Shop,Specialty Bike Shop,19,NULL,Road,800000,80000,1994
+448,Action Bicycle Specialists,Warehouse,49,2013,Touring,1500000,150000,1996
+449,Bike Products and Accessories,Value Added Reseller,14,2012,Mountain,800000,80000,1998
+450,Bikes Anyone?,Specialty Bike Shop,22,NULL,Touring,1000000,100000,2000
+451,Roadway Bike Emporium,Warehouse,52,2012,Touring,3000000,300000,2002
+452,A Cycle Shop,Value Added Reseller,17,NULL,Touring,800000,80000,2004
+453,Unique Bikes,Specialty Bike Shop,25,2011,Mountain,1000000,100000,2005
+454,Sleek Bikes,Warehouse,55,2013,Touring,3000000,300000,2003
+455,Timely Shipping Service,Value Added Reseller,20,NULL,Mountain,1000000,100000,2004
+456,Riding Excursions,Specialty Bike Shop,28,2011,Road,1000000,100000,1975
+457,Retail Sporting Equipment,Warehouse,58,2012,Mountain,3000000,300000,2003
+458,Simple Bike Parts,Value Added Reseller,19,2010,Road,800000,80000,1979
+459,Parts Shop,Specialty Bike Shop,31,2013,Road,1500000,150000,2002
+460,Price-Cutter Discount Bikes,Warehouse,61,2011,Road,3000000,300000,1983
+461,Active Life Toys,Value Added Reseller,18,2012,Road,800000,80000,2001
+462,General Riding Supplies,Specialty Bike Shop,34,2012,Mountain,1500000,150000,1987
+463,Brand New Bikes,Warehouse,64,NULL,Road,3000000,300000,2000
+464,Educational Services,Value Added Reseller,17,2013,Touring,800000,80000,1991
+465,Expert Cycle Store,Specialty Bike Shop,37,NULL,Touring,1500000,150000,1999
+466,Central Bicycle Specialists,Warehouse,67,2013,Touring,3000000,300000,1995
+467,The Cycle Store,Value Added Reseller,16,2013,Mountain,800000,80000,1998
+468,Blue Bicycle Company,Specialty Bike Shop,40,2012,Road,1500000,150000,1999
+469,Vast Bike Sales and Rental,Warehouse,70,2011,Mountain,3000000,300000,1997
+470,Wingtip Toys,Value Added Reseller,15,2013,Mountain,800000,80000,2003
+471,Social Activities Club,Specialty Bike Shop,43,2011,Road,1500000,150000,1996
+472,Summer Sports Place,Warehouse,73,2012,Mountain,3000000,300000,2002
+473,Racing Toys,Value Added Reseller,14,2011,Road,800000,80000,1995
+474,Retail Cycle Shop,Specialty Bike Shop,46,2012,Mountain,1500000,150000,2001
+475,Real Sporting Goods,Warehouse,76,2011,Mountain,3000000,300000,1994
+476,Noiseless Gear Company,Value Added Reseller,13,2012,Mountain,800000,80000,2000
+477,Quitting Business Distributors,Specialty Bike Shop,49,2013,Touring,1500000,150000,1993
+478,Major Cycling,Warehouse,79,2011,Road,3000000,300000,1999
+479,General Supplies,Value Added Reseller,12,2012,Road,800000,80000,1992
+480,General Bike Corporation,Specialty Bike Shop,48,2010,Road,1500000,150000,1998
+481,Getaway Inn,Warehouse,80,2012,Road,3000000,300000,1991
+482,"Fabrikam Inc., East",Value Added Reseller,11,2012,Road,800000,80000,1997
+483,Fitness Bike Accessories,Specialty Bike Shop,47,2013,Touring,1500000,150000,1990
+484,Downhill Bicycle Specialists,Warehouse,81,2012,Mountain,3000000,300000,1996
+485,Clamps & Brackets Co.,Value Added Reseller,10,2010,Mountain,800000,80000,1989
+486,Convenient Bike Shop,Specialty Bike Shop,46,2010,Road,1500000,150000,1995
+487,Bike Experts,Warehouse,82,2012,Mountain,3000000,300000,1988
+488,Bicycle Accessories and Kits,Value Added Reseller,9,2012,Mountain,300000,30000,1994
+489,Cash & Carry Bikes,Specialty Bike Shop,45,2012,Mountain,1500000,150000,1987
+490,Extraordinary Bike Works,Warehouse,83,2012,Mountain,3000000,300000,1993
+491,Area Bike Accessories,Value Added Reseller,8,2010,Road,300000,30000,1986
+492,Basic Sports Equipment,Specialty Bike Shop,44,2011,Mountain,1500000,150000,1992
+493,Valley Bicycle Distributors,Warehouse,84,2012,Road,3000000,300000,1985
+494,Worthwhile Activity Store,Value Added Reseller,7,2011,Mountain,300000,30000,1991
+495,Tough and Reliable Parts,Specialty Bike Shop,43,2011,Road,1500000,150000,1984
+496,Top Sports Supply,Warehouse,85,2011,Mountain,3000000,300000,1990
+497,Valley Toy Store,Value Added Reseller,6,2012,Mountain,300000,30000,1983
+498,Quick Delivery Service,Specialty Bike Shop,42,2011,Mountain,1500000,150000,1989
+499,Racing Sales and Service,Warehouse,86,2012,Road,3000000,300000,1982
+500,Irregulars Outlet,Value Added Reseller,5,NULL,Mountain,300000,30000,1988
+501,Jumbo Bikes,Specialty Bike Shop,41,2013,Touring,1500000,150000,1981
+502,Metropolitan Bicycle Supply,Warehouse,87,2012,Mountain,3000000,300000,1987
+503,Metropolitan Sales and Rental,Value Added Reseller,4,2011,Road,300000,30000,1980
+504,Historic Bicycle Sales,Specialty Bike Shop,40,2010,Mountain,1500000,150000,1986
+505,Honest Repair Service,Warehouse,88,2012,Touring,3000000,300000,1979
+506,Great Bikes,Value Added Reseller,3,2010,Mountain,300000,30000,1985
+507,Global Sporting Goods,Specialty Bike Shop,39,NULL,Road,1500000,150000,1978
+508,Designer Department Stores,Warehouse,89,NULL,Road,3000000,300000,1984
+509,Fun Toys and Bikes,Value Added Reseller,2,2013,Touring,300000,30000,1977
+510,World Bike Discount Store,Specialty Bike Shop,38,2010,Road,1500000,150000,1983
+511,Wheel Gallery,Warehouse,90,2010,Road,3000000,300000,1976
+512,Tiny Bike Boutique,Value Added Reseller,4,2012,Road,300000,30000,1982
+513,Village Tours,Specialty Bike Shop,37,2012,Mountain,1500000,150000,1975
+514,Retail Mall,Warehouse,91,2010,Road,3000000,300000,1981
+515,Rural Bicycle Supply,Value Added Reseller,6,NULL,Mountain,300000,30000,1974
+516,Seats and Saddles Company,Specialty Bike Shop,36,2012,Mountain,1500000,150000,1980
+517,Racing Store,Warehouse,92,NULL,Road,3000000,300000,1991
+518,Regional Cycle Shop,Value Added Reseller,8,2013,Road,300000,30000,1979
+519,List Price Catalog Company,Specialty Bike Shop,35,2013,Touring,1500000,150000,1992
+520,Metro Metals Co.,Warehouse,93,2013,Touring,3000000,300000,1978
+521,Mobile Outlet,Value Added Reseller,10,2013,Road,800000,80000,1974
+522,Small Bike Accessories Shop,Specialty Bike Shop,34,2013,Touring,1500000,150000,1976
+523,Futuristic Sport Distributors,Warehouse,94,2011,Road,3000000,300000,1978
+524,Chain and Chain Tool Distributions,Value Added Reseller,12,2012,Road,800000,80000,1980
+525,Cycles and Scooters,Specialty Bike Shop,33,2011,Road,1500000,150000,1982
+526,Finer Sales and Service,Warehouse,95,NULL,Road,3000000,300000,1984
+527,Fun Times Club,Value Added Reseller,14,2011,Road,800000,80000,1986
+528,Alpine Ski House,Specialty Bike Shop,32,2011,Road,1500000,150000,1988
+529,Big-Time Bike Store,Warehouse,96,2012,Road,3000000,300000,1990
+530,Valuable Bike Parts Company,Value Added Reseller,16,2011,Mountain,800000,80000,1992
+531,Sunny Place Bikes,Specialty Bike Shop,31,2011,Road,1500000,150000,1994
+532,The Showroom,Warehouse,97,2011,Road,3000000,300000,1996
+533,Tenth Bike Store,Value Added Reseller,18,2011,Road,800000,80000,1998
+534,Recommended Bicycles,Specialty Bike Shop,30,2011,Road,1500000,150000,2000
+535,Spa and Exercise Outfitters,Warehouse,98,2012,Mountain,3000000,300000,2002
+536,Next Door Cycles,Value Added Reseller,20,2013,Touring,1000000,100000,2004
+537,Preferable Bikes,Specialty Bike Shop,29,NULL,Touring,1000000,100000,2005
+538,Prosperous Tours,Warehouse,99,2011,Road,3000000,300000,2003
+539,Glossy Bikes,Value Added Reseller,19,2013,Touring,800000,80000,2004
+540,Guaranteed Sales and Service,Specialty Bike Shop,28,2012,Road,1000000,100000,1975
+541,Nonskid Tire Company,Warehouse,100,2011,Mountain,3000000,300000,2003
+542,Finer Parts Shop,Value Added Reseller,18,2011,Mountain,800000,80000,1979
+543,Friendly Neighborhood Bikes,Specialty Bike Shop,27,2012,Mountain,1000000,100000,2002
+544,Valley Bicycle Specialists,Warehouse,66,2012,Mountain,3000000,300000,1983
+545,Finish and Sealant Products,Value Added Reseller,17,2011,Road,800000,80000,2001
+546,Field Trip Store,Value Added Reseller,2,2012,Mountain,300000,30000,1974
+547,Curbside Sporting Goods,Specialty Bike Shop,10,NULL,Road,800000,80000,1976
+548,New Bikes Company,Warehouse,40,2011,Road,1500000,150000,1978
+549,Daring Rides,Value Added Reseller,5,2010,Road,300000,30000,1980
+550,Remote Bicycle Specialists,Specialty Bike Shop,13,2012,Road,800000,80000,1982
+551,Vinyl and Plastic Goods Corporation,Warehouse,43,2011,Mountain,1500000,150000,1984
+552,Consolidated Messenger,Value Added Reseller,8,2013,Road,300000,30000,1986
+553,Accessories Network,Specialty Bike Shop,16,2013,Touring,800000,80000,1988
+554,Top of the Line Bikes,Warehouse,46,2013,Touring,1500000,150000,1990
+555,Twin Cycles,Value Added Reseller,11,2013,Touring,800000,80000,1992
+556,Variety Cycling,Specialty Bike Shop,19,2013,Touring,800000,80000,1994
+557,Purchase Mart,Warehouse,49,2013,Touring,1500000,150000,1996
+558,Retail Sales and Service,Value Added Reseller,14,2011,Road,800000,80000,1998
+559,Some Discount Store,Specialty Bike Shop,22,2011,Mountain,1000000,100000,2000
+560,Major Sport Suppliers,Warehouse,52,2012,Mountain,3000000,300000,2002
+561,Mountain Toy Store,Value Added Reseller,17,2011,Road,800000,80000,2004
+562,Practical Bike Supply Company,Specialty Bike Shop,25,2011,Mountain,1000000,100000,2005
+563,Systematic Sales,Warehouse,55,2013,Touring,3000000,300000,2003
+564,Imported and Domestic Cycles,Value Added Reseller,20,2012,Road,1000000,100000,2004
+565,Metallic Paint and Overcoat Co,Specialty Bike Shop,28,NULL,Road,1000000,100000,1975
+566,eCommerce Bikes,Warehouse,58,2011,Mountain,3000000,300000,2003
+567,Global Plaza,Value Added Reseller,19,2011,Mountain,800000,80000,1979
+568,Economy Center,Specialty Bike Shop,31,2011,Mountain,1500000,150000,2002
+569,Designated Distributors,Warehouse,61,2011,Road,3000000,300000,1983
+570,Family's Favorite Bike Shop,Value Added Reseller,18,2012,Mountain,800000,80000,2001
+571,Community Department Stores,Specialty Bike Shop,34,2012,Mountain,1500000,150000,1987
+572,Versatile Sporting Goods Company,Warehouse,64,2012,Road,3000000,300000,2000
+573,Nationwide Supply,Value Added Reseller,17,2013,Touring,800000,80000,1991
+574,Area Sheet Metal Supply,Specialty Bike Shop,37,2012,Road,1500000,150000,1999
+575,Bicycle Outfitters,Warehouse,67,2011,Road,3000000,300000,1995
+576,The Bike Mechanics,Value Added Reseller,16,2011,Mountain,800000,80000,1998
+577,Synthetic Materials Manufacturing,Specialty Bike Shop,40,2011,Road,1500000,150000,1999
+578,The Bike Shop,Warehouse,70,2010,Mountain,3000000,300000,1997
+579,Riders Company,Value Added Reseller,15,2011,Road,800000,80000,2003
+580,Rural Sales and Service,Specialty Bike Shop,43,2011,Road,1500000,150000,1996
+581,Safe Toys,Warehouse,73,2011,Mountain,3000000,300000,2002
+582,Professional Sales and Service,Value Added Reseller,14,2013,Touring,800000,80000,1995
+583,Professional Containers and Packaging Co.,Specialty Bike Shop,46,2012,Mountain,1500000,150000,2001
+584,Qualified Sales and Repair Services,Warehouse,76,2011,Road,3000000,300000,1994
+585,Next-Door Bike Store,Value Added Reseller,13,2011,Mountain,800000,80000,2000
+586,One Bike Company,Specialty Bike Shop,49,2012,Mountain,1500000,150000,1993
+587,Our Sporting Goods Store,Warehouse,79,2012,Road,3000000,300000,1999
+588,General Cycle Storehouse,Value Added Reseller,12,2011,Mountain,800000,80000,1992
+589,Hiatus Bike Tours,Specialty Bike Shop,48,NULL,Touring,1500000,150000,1998
+590,Lustrous Paints and Components,Warehouse,80,2012,Road,3000000,300000,1991
+591,Fitness Discount Store,Value Added Reseller,11,2012,Touring,800000,80000,1997
+592,Cycling Goods,Specialty Bike Shop,47,2012,Road,1500000,150000,1990
+593,Expert Sports Store,Warehouse,81,2013,Mountain,3000000,300000,1996
+594,Casual Bicycle Store,Value Added Reseller,10,2011,Mountain,800000,80000,1989
+595,Cycle Clearance,Specialty Bike Shop,46,2013,Touring,1500000,150000,1995
+596,Coho Sports,Warehouse,82,2012,Mountain,3000000,300000,1988
+597,All Seasons Sports Supply,Value Added Reseller,9,2012,Touring,300000,30000,1994
+598,Black Bicycle Company,Specialty Bike Shop,45,2012,Mountain,1500000,150000,1987
+599,Westside Plaza,Warehouse,83,2012,Touring,3000000,300000,1993
+600,Strenuous Exercise Shop,Value Added Reseller,8,NULL,Mountain,300000,30000,1986
+601,Transport Bikes,Specialty Bike Shop,44,2013,Touring,1500000,150000,1992
+602,Ultimate Bike Shop,Warehouse,84,2011,Mountain,3000000,300000,1985
+603,Retail Toy Store,Value Added Reseller,7,2010,Road,300000,30000,1991
+604,Sellers of Cycles,Specialty Bike Shop,43,2013,Road,1500000,150000,1984
+605,Outstanding Cycles,Warehouse,85,2013,Touring,3000000,300000,1990
+606,Little Bicycle Supply Shop,Value Added Reseller,6,2013,Road,300000,30000,1983
+607,Maintenance and Repair for Bicycles,Specialty Bike Shop,42,2013,Touring,1500000,150000,1989
+608,Golf and Cycle Store,Warehouse,86,2011,Mountain,3000000,300000,1982
+609,Good Toys,Value Added Reseller,5,2012,Road,300000,30000,1988
+610,Fitness Department Stores,Specialty Bike Shop,41,2013,Touring,1500000,150000,1981
+611,Front Runner Bikes,Warehouse,87,2013,Touring,3000000,300000,1987
+612,General Associates,Value Added Reseller,4,2011,Road,300000,30000,1980
+613,Famous Bike Shop,Specialty Bike Shop,40,2012,Mountain,1500000,150000,1986
+614,Favorite Toy Distributor,Warehouse,88,2013,Touring,3000000,300000,1979
+615,Fast Services,Value Added Reseller,3,2013,Road,300000,30000,1985
+616,Eastward Bike Accessories,Specialty Bike Shop,39,2013,Touring,1500000,150000,1978
+617,Tubeless Tire Company,Warehouse,89,2013,Touring,3000000,300000,1984
+618,Seventh Bike Store,Value Added Reseller,2,2010,Road,300000,30000,1977
+619,Strong Metal Manufacturing,Specialty Bike Shop,38,NULL,Road,1500000,150000,1983
+620,Tires and Tubes,Warehouse,90,NULL,Mountain,3000000,300000,1976
+621,Running and Cycling Gear,Value Added Reseller,4,2013,Touring,300000,30000,1982
+622,Gift and Toy Store,Specialty Bike Shop,37,2011,Road,1500000,150000,1975
+623,Hardware Components,Warehouse,91,2011,Mountain,3000000,300000,1981
+624,First Cycle Store,Value Added Reseller,6,2011,Road,300000,30000,1974
+625,Major Sporting Goods,Specialty Bike Shop,36,2012,Road,1500000,150000,1980
+626,Retail Sporting Goods,Warehouse,92,2012,Road,3000000,300000,1991
+627,Exchange Parts Inc.,Value Added Reseller,8,2013,Touring,300000,30000,1979
+628,Executive Discount Store,Specialty Bike Shop,35,2011,Road,1500000,150000,1992
+629,Efficient Cycling,Warehouse,93,2013,Touring,3000000,300000,1978
+630,Eastside Parts Shop,Value Added Reseller,10,2013,Touring,800000,80000,1974
+631,Tandem Sales and Service,Specialty Bike Shop,34,2011,Road,1500000,150000,1976
+632,Ultimate Bicycle Company,Warehouse,94,2013,Mountain,3000000,300000,1978
+633,Rustic Bike Store,Value Added Reseller,12,2013,Touring,800000,80000,1980
+634,Sensible Sports,Specialty Bike Shop,33,2012,Touring,1500000,150000,1982
+635,Sports Store,Warehouse,95,2012,Mountain,3000000,300000,1984
+636,Recreation Systems,Value Added Reseller,14,2012,Road,800000,80000,1986
+637,Reliable Retail Center,Specialty Bike Shop,32,2012,Road,1500000,150000,1988
+638,Metropolitan Equipment,Warehouse,96,2012,Road,3000000,300000,1990
+639,Producer Goods Clearinghouse,Value Added Reseller,16,2012,Road,800000,80000,1992
+640,Liquidation Sales,Specialty Bike Shop,31,2013,Touring,1500000,150000,1994
+641,Extended Tours,Warehouse,97,2011,Road,3000000,300000,1996
+642,Fitness Sport Boutique,Value Added Reseller,18,2012,Mountain,800000,80000,1998
+643,Friendly Bike Shop,Specialty Bike Shop,30,2011,Road,1500000,150000,2000
+644,Convenient Sales and Service,Warehouse,98,2012,Road,3000000,300000,2002
+645,Superior Hardware Distributors,Value Added Reseller,20,2012,Mountain,1000000,100000,2004
+646,Yellow Bicycle Company,Specialty Bike Shop,29,2010,Mountain,1000000,100000,2005
+647,Solid Bike Parts,Warehouse,99,2011,Road,3000000,300000,2003
+648,Small Bike Shop,Value Added Reseller,19,2011,Mountain,800000,80000,2004
+649,Sports Products Store,Specialty Bike Shop,28,2012,Road,1000000,100000,1975
+650,Permanent Finish Products,Warehouse,100,2011,Mountain,3000000,300000,2003
+651,Retread Tire Company,Value Added Reseller,18,2012,Road,800000,80000,1979
+652,Selected Distributors,Specialty Bike Shop,27,2012,Mountain,1000000,100000,2002
+653,Mercantile Outlet,Warehouse,66,2012,Mountain,3000000,300000,1983
+654,Online Bike Warehouse,Value Added Reseller,17,2012,Road,800000,80000,2001
+655,Operational Manufacturing,Value Added Reseller,2,2013,Mountain,300000,30000,1974
+656,Impervious Paint Company,Specialty Bike Shop,10,2013,Mountain,800000,80000,1976
+657,Links Works,Warehouse,40,NULL,Mountain,1500000,150000,1978
+658,Mass Market Bikes,Value Added Reseller,5,NULL,Touring,300000,30000,1980
+659,Shipping Specialists,Specialty Bike Shop,13,2013,Road,800000,80000,1982
+660,Exhilarating Cycles,Warehouse,43,2011,Road,1500000,150000,1984
+661,General Department Stores,Value Added Reseller,8,2011,Mountain,300000,30000,1986
+662,Finer Sporting Goods,Specialty Bike Shop,16,2013,Touring,800000,80000,1988
+663,Capital Riding Supplies,Warehouse,46,2013,Mountain,1500000,150000,1990
+664,Eastside Cycle Shop,Value Added Reseller,11,2012,Touring,800000,80000,1992
+665,Authentic Sales and Service,Specialty Bike Shop,19,2012,Mountain,800000,80000,1994
+666,Bike Boutique,Warehouse,49,2012,Road,1500000,150000,1996
+667,Traditional Department Stores,Value Added Reseller,14,2012,Mountain,800000,80000,1998
+668,Official Parts Shop,Specialty Bike Shop,22,2011,Road,1000000,100000,2000
+669,Racing Bike Outlet,Warehouse,52,2012,Road,3000000,300000,2002
+670,First Bike Store,Value Added Reseller,17,2010,Road,800000,80000,2004
+671,"Contoso, Ltd.",Specialty Bike Shop,25,NULL,Road,1000000,100000,2005
+672,Utilitarian Sporting Goods,Warehouse,55,2013,Touring,3000000,300000,2003
+673,Countryside Company,Value Added Reseller,20,2012,Mountain,1000000,100000,2004
+674,Discount Tours,Specialty Bike Shop,28,2011,Road,1000000,100000,1975
+675,Bike Goods,Warehouse,58,2011,Road,3000000,300000,2003
+676,Better Bike Shop,Value Added Reseller,19,2010,Mountain,800000,80000,1979
+677,Tire Exchange,Specialty Bike Shop,31,2012,Mountain,1500000,150000,2002
+678,Vigorous Exercise Company,Warehouse,61,2011,Mountain,3000000,300000,1983
+679,Superb Sales and Repair,Value Added Reseller,18,2010,Road,800000,80000,2001
+680,Racing Tours,Specialty Bike Shop,34,2013,Mountain,1500000,150000,1987
+681,Showcase for Cycles,Warehouse,64,2013,Road,3000000,300000,2000
+682,Popular Bike Lines,Value Added Reseller,17,2013,Touring,800000,80000,1991
+683,Oils and Fluids Warehouse,Specialty Bike Shop,37,2012,Mountain,1500000,150000,1999
+684,Lease-a-Bike Shop,Warehouse,67,2011,Road,3000000,300000,1995
+685,Family Cycle Store,Value Added Reseller,16,2012,Mountain,800000,80000,1998
+686,Finished Parts Shop,Specialty Bike Shop,40,2012,Mountain,1500000,150000,1999
+687,Functional Store South,Warehouse,70,2013,Mountain,3000000,300000,1997
+688,Bike Part Wholesalers,Value Added Reseller,15,2013,Touring,800000,80000,2003
+689,Consumer Equipment,Specialty Bike Shop,43,NULL,Road,1500000,150000,1996
+690,Active Cycling,Warehouse,73,2012,Road,3000000,300000,2002
+691,Mountain Bike Store,Value Added Reseller,14,2012,Touring,800000,80000,1995
+692,Successful Sales Company,Specialty Bike Shop,46,2012,Road,1500000,150000,2001
+693,Stock Parts and Supplies,Warehouse,76,2013,Touring,3000000,300000,1994
+694,The Accessories Store,Value Added Reseller,13,2012,Road,800000,80000,2000
+695,Responsible Bike Dealers,Specialty Bike Shop,49,2012,Mountain,1500000,150000,1993
+696,Roadway Supplies,Warehouse,79,2011,Road,3000000,300000,1999
+697,Brakes and Gears,Value Added Reseller,12,2011,Mountain,800000,80000,1992
+698,Western Bike Supplies,Specialty Bike Shop,48,2011,Road,1500000,150000,1998
+699,Sensational Discount Store,Warehouse,80,2013,Road,3000000,300000,1991
+700,Underglaze and Finish Company,Value Added Reseller,11,2013,Road,800000,80000,1997
+701,Future Bikes,Warehouse,81,2012,Road,3000000,300000,1996
