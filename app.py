@@ -197,9 +197,33 @@ fig1 = px.treemap(
 )
 fig1.update_layout(margin=dict(t=30, l=0, r=0, b=0))
 
+# Plot 2: Sales by Month and Year (Line chart)
+fig2 = px.area(
+    df_selection['TerritoryGroup'],
+    x="Month",
+    y="SalesAmount",
+    color="Year",
+    line_group="Year",
+    title="Sales by Month and Year",
+    color_discrete_sequence=["teal", "orange", "gray", "coral"]
+)
+fig2.update_layout(margin=dict(t=30, l=0, r=0, b=0))
 
-
-
+# Plot 3: Sales by Product Line and Territory Group (Bar chart)
+fig3 = px.bar(
+    df_selection['ProductCategory'],
+    x="ProductLine",
+    y="SalesAmount",
+    color="TerritoryGroup",
+    barmode="group",
+    title="Sales by Product Line and Sales Territory Group",
+    color_discrete_map={
+        "Europe": "gray",
+        "North America": "teal",
+        "Pacific": "coral"
+    }
+)
+fig3.update_layout(margin=dict(t=30, l=0, r=0, b=0))
 
 # Display the plots in three columns
 col1, col2, col3 = st.columns(3)
@@ -207,3 +231,8 @@ col1, col2, col3 = st.columns(3)
 with col1:
     st.plotly_chart(fig1, use_container_width=True)
 
+with col2:
+    st.plotly_chart(fig2, use_container_width=True)
+
+with col3:
+    st.plotly_chart(fig3, use_container_width=True)
