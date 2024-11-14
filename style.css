@@ -27,3 +27,31 @@ div[data-testid="stExpander"] div[role="button"] p
     color: rgb(119, 47, 47);
      
 }
+
+.embossed-card {
+    background-color: #f0f2f6;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2), 
+                -3px -3px 10px rgba(255, 255, 255, 1);
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.embossed-card:hover {
+    transform: scale(1.05);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3), 
+                -5px -5px 15px rgba(255, 255, 255, 1);
+}
+.icon {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.icon-sales { color: #4CAF50; }
+.icon-profit { color: #FF9800; }
+.icon-customers { color: #00BCD4; }
+.icon-products { color: #9C27B0; }
+.icon-countries { color: #FF5722; }
+.icon-orders { color: #3F51B5; }
+.icon-returns { color: #E91E63; }
+.icon-shipping { color: #673AB7; }
