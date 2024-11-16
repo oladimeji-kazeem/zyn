@@ -103,7 +103,7 @@ def metrics():
     card4.metric("Products", value=f"{df.ProductName.nunique()}", delta="Products")
     card5.metric("Countries", value=df.Country.nunique(), delta="Countries")
 
-    style_metric_cards(background_color="#071021", border_left_color="#1f66bd")
+    style_metric_cards(background_color="#dfdfdf", border_left_color="#1f66bd")
         
 
 
@@ -596,13 +596,275 @@ def display_sales_insights():
 
 def display_customer_insights():
     st.subheader("Customer Insights")
-    if not df.empty and 'Gender' in df.columns:
-        fig = px.pie(df, names='Gender', values='SalesAmount', title="Sales Distribution by Gender")
-        st.plotly_chart(fig, use_container_width=True)
+    
+    def customer_metrics():
+        from streamlit_extras.metric_cards import style_metric_cards
+        card6, card7, card8, card9, card10 = st.columns(5)
+
+        card6.metric("Sales", value=f"${df.SalesAmount.sum()/ 1e6:.1f}M", delta="Total Sales")
+        card7.metric("Orders", value=f"{df.Profit.sum()/ 1e6:.1f}M", delta="Profit")
+        card8.metric("Freight", value=f"${df.Freight.sum()/ 1e6:.1f}M", delta="Total Freight")
+        card9.metric("Tax Amount", value=f"${df.TaxAmt.sum()/ 1e6:.1f}M", delta="Total Tax")
+        card10.metric("Customers", value=f"{df.CustomerID.nunique()/1e3:.1f}K", delta="Customers")
+        
+
+        style_metric_cards(background_color="#dfdfdf", border_left_color="#1f66bd")
+    customer_metrics()
+    
+    # Grouped Bar Chart: SalesAmount vs TerritoryGroup and Gender
+    col1, col2 = st.columns(2)
+
+    with col1:
+        st.write("**SalesAmount by TerritoryGroup and Gender**")
+        if 'TerritoryGroup' in df.columns and 'Gender' in df.columns:
+            df['Gender'] = df['Gender'].replace({'M': 'Male', 'F': 'Female'})  # Replace M/F
+            sales_gender = df.groupby(['TerritoryGroup', 'Gender']).agg({'SalesAmount': 'sum'}).reset_index()
+            fig_gender_territory = px.bar(
+                sales_gender,
+                x='TerritoryGroup',
+                y='SalesAmount',
+                color='Gender',
+                #title="SalesAmount by TerritoryGroup and Gender",
+                labels={'SalesAmount': 'Sales Amount (£)', 'TerritoryGroup': 'Territory Group'},
+                barmode='group'
+            )
+            fig_gender_territory.update_layout(yaxis_tickformat="£,.0f", legend_title="Gender")
+            st.plotly_chart(fig_gender_territory, use_container_width=True)
+        else:
+            st.warning("Territory Group or Gender data is not available.")
+
+    # Grouped Bar Chart: SalesAmount vs TerritoryGroup and Marital Status
+    with col2:
+        st.write("**SalesAmount by TerritoryGroup and Marital Status**")
+        if 'TerritoryGroup' in df.columns and 'MaritalStatus' in df.columns:
+            df['MaritalStatus'] = df['MaritalStatus'].replace({'M': 'Married', 'S': 'Single'})  # Replace M/S
+            sales_marital = df.groupby(['TerritoryGroup', 'MaritalStatus']).agg({'SalesAmount': 'sum'}).reset_index()
+            fig_marital_territory = px.bar(
+                sales_marital,
+                x='TerritoryGroup',
+                y='SalesAmount',
+                color='MaritalStatus',
+                #title="SalesAmount by TerritoryGroup and Marital Status",
+                labels={'SalesAmount': 'Sales Amount (£)', 'TerritoryGroup': 'Territory Group'},
+                barmode='group'
+            )
+            fig_marital_territory.update_layout(yaxis_tickformat="£,.0f", legend_title="Marital Status")
+            st.plotly_chart(fig_marital_territory, use_container_width=True)
+        else:
+            st.warning("Territory Group or Marital Status data is not available.")
+
+    # Row 2: CustomerID Count vs Country and Number of SalesOrders vs Country
+    col3, col4 = st.columns(2)
+
+    # Bar Chart: CustomerID Count vs Country
+    with col3:
+        st.write("**CustomerID Count vs Country**")
+        if 'Country' in df.columns:
+            customer_country = df.groupby('Country').agg({'CustomerID': 'nunique'}).reset_index()
+            #customer_country['Freight'] = customer_country['Freight'] / 1e6
+            customer_country.columns = ['Country', 'CustomerCount']
+            fig_customer_country = px.bar(
+                customer_country,
+                x='Country',
+                y='CustomerCount',
+                #title="Customer Count by Country",
+                labels={'CustomerCount': 'Customer Count', 'Country': 'Country'}
+            )
+            st.plotly_chart(fig_customer_country, use_container_width=True)
+        else:
+            st.warning("Country data is not available.")
+
+    # Bar Chart: Number of SalesOrders vs Country
+    with col4:
+        st.write("**Number of SalesOrders vs Country**")
+        if 'Country' in df.columns:
+            orders_country = df.groupby('Country').agg({'SalesOrderNumber': 'nunique'}).reset_index()
+            orders_country.columns = ['Country', 'NumSalesOrders']
+            fig_orders_country = px.bar(
+                orders_country,
+                x='Country',
+                y='NumSalesOrders',
+                #title="Number of SalesOrders by Country",
+                labels={'NumSalesOrders': 'Number of SalesOrders', 'Country': 'Country'}
+            )
+            st.plotly_chart(fig_orders_country, use_container_width=True)
+        else:
+            st.warning("Country data is not available.")
+
+    # Row 3: Top 10 CustomerNames by SalesAmount (Horizontal Bar Chart)
+    st.write("**Top 10 CustomerNames by SalesAmount**")
+    if 'CustomerName' in df.columns:
+        top_customers = df.groupby('CustomerName').agg({'SalesAmount': 'sum'}).reset_index().sort_values(by='SalesAmount', ascending=False).head(10)
+        fig_top_customers = px.bar(
+            top_customers,
+            x='SalesAmount',
+            y='CustomerName',
+            orientation='h',
+            #title="Top 10 Customers by SalesAmount",
+            labels={'SalesAmount': 'Sales Amount (£)', 'CustomerName': 'Customer Name'}
+        )
+        fig_top_customers.update_layout(xaxis_tickformat="£,.0f")
+        st.plotly_chart(fig_top_customers, use_container_width=True)
     else:
-        st.warning("Required data for Customer Insights is not available.")
+        st.warning("Customer Name data is not available.")
+
+    # Row 4: Freight and TaxAmount by Country
+    col5, col6 = st.columns(2)
+
+    # Bar Chart: Freight by Country
+    with col5:
+        st.write("**Freight by Country**")
+        if 'Country' in df.columns and 'Freight' in df.columns:
+            freight_country = df.groupby('Country').agg({'Freight': 'sum'}).reset_index()
+            freight_country['Freight'] = freight_country['Freight'] / 1e6
+            freight_country['Percentage'] = 100 * freight_country['Freight'] / freight_country['Freight'].sum()
+            fig_freight_country = px.bar(
+                freight_country,
+                x='Country',
+                y='Freight',
+                #title="Freight by Country",
+                text='Percentage',
+                labels={'Freight': 'Freight (£) X 1M', 'Country': 'Country'}
+            )
+            fig_freight_country.update_traces(texttemplate='%{text:.2f}%', textposition='outside')
+            fig_freight_country.update_layout(yaxis_tickformat="£,.0f")
+            st.plotly_chart(fig_freight_country, use_container_width=True)
+        else:
+            st.warning("Country or Freight data is not available.")
+
+    # Bar Chart: TaxAmount by Country
+    with col6:
+        st.write("**TaxAmount by Country**")
+        if 'Country' in df.columns and 'TaxAmt' in df.columns:
+            tax_country = df.groupby('Country').agg({'TaxAmt': 'sum'}).reset_index()
+            tax_country['TaxAmt'] = tax_country['TaxAmt'] / 1e6
+            tax_country['Percentage'] = 100 * tax_country['TaxAmt'] / tax_country['TaxAmt'].sum()
+            fig_tax_country = px.bar(
+                tax_country,
+                x='Country',
+                y='TaxAmt',
+                #title="TaxAmount by Country",
+                text='Percentage',
+                labels={'TaxAmt': 'Tax Amount (£) x 1M', 'Country': 'Country'}
+            )
+            fig_tax_country.update_traces(texttemplate='%{text:.2f}%', textposition='outside')
+            fig_tax_country.update_layout(yaxis_tickformat="£,.0f")
+            st.plotly_chart(fig_tax_country, use_container_width=True)
+        else:
+            st.warning("Country or TaxAmount data is not available.")
+
+    # Row: Age Group Charts
+    col7, col8 = st.columns(2)
+
+    # Grouped Bar Chart: SalesAmount vs AgeGroup by Gender
+    with col7:
+        st.write("**SalesAmount vs AgeGroup by Gender (in Millions)**")
+        if 'Age' in df.columns and 'Gender' in df.columns:
+            # Define age bins and create AgeGroup column
+            age_bins = [0, 30, 40, 50, 60, 70, 100]
+            df['AgeGroup'] = pd.cut(df['Age'], bins=age_bins, labels=['0-30', '30-40', '40-50', '50-60', '60-70', '70+'])
+            
+            # Group by AgeGroup and Gender
+            sales_age_gender = df.groupby(['AgeGroup', 'Gender']).agg({'SalesAmount': 'sum'}).reset_index()
+            sales_age_gender['SalesAmount'] = sales_age_gender['SalesAmount'] / 1e6  # Convert to millions
+            
+            # Create grouped bar chart
+            fig_sales_age_gender = px.bar(
+                sales_age_gender,
+                x='AgeGroup',
+                y='SalesAmount',
+                color='Gender',
+                #title="SalesAmount vs AgeGroup by Gender",
+                labels={'SalesAmount': 'Sales Amount (Millions)', 'AgeGroup': 'Age Group'},
+                barmode='group'
+            )
+            fig_sales_age_gender.update_layout(yaxis_tickformat=".2fM", legend_title="Gender")
+            st.plotly_chart(fig_sales_age_gender, use_container_width=True)
+        else:
+            st.warning("Age or Gender data is not available.")
+
+    # Grouped Bar Chart: Number of SalesOrders vs AgeGroup by Gender
+    with col8:
+        st.write("**Number of SalesOrders vs AgeGroup by Gender (in Thousands)**")
+        if 'Age' in df.columns and 'Gender' in df.columns:
+            sales_orders_age_gender = df.groupby(['AgeGroup', 'Gender']).agg({'SalesOrderNumber': 'nunique'}).reset_index()
+            sales_orders_age_gender.columns = ['AgeGroup', 'Gender', 'NumSalesOrders']
+            sales_orders_age_gender['NumSalesOrders'] = sales_orders_age_gender['NumSalesOrders'] / 1e3  # Convert to thousands
+            
+            fig_orders_age_gender = px.bar(
+                sales_orders_age_gender,
+                x='AgeGroup',
+                y='NumSalesOrders',
+                color='Gender',
+                #title="Number of SalesOrders vs AgeGroup by Gender",
+                labels={'NumSalesOrders': 'Number of SalesOrders (Thousands)', 'AgeGroup': 'Age Group'},
+                barmode='group'
+            )
+            fig_orders_age_gender.update_layout(yaxis_tickformat=".1fK", legend_title="Gender")
+            st.plotly_chart(fig_orders_age_gender, use_container_width=True)
+        else:
+            st.warning("Age or Gender data is not available.")
+
+    # Row: TotalChildren Charts
+    col1, col2 = st.columns(2)
+
+    # Bar Chart: SalesAmount vs TotalChildren
+    with col1:
+        st.write("**SalesAmount vs TotalChildren**")
+        if 'TotalChildren' in df.columns:
+            total_children_sales = df.groupby('TotalChildren').agg({'SalesAmount': 'sum'}).reset_index()
+            total_children_sales['SalesAmount'] = total_children_sales['SalesAmount'] / 1e6  # Convert to millions
+            
+            fig_sales_total_children = px.bar(
+                total_children_sales,
+                x='TotalChildren',
+                y='SalesAmount',
+                #title="SalesAmount vs TotalChildren",
+                labels={'SalesAmount': 'Sales Amount (Millions)', 'TotalChildren': 'Total Children'}
+            )
+            fig_sales_total_children.update_layout(yaxis_tickformat=".2fM")
+            st.plotly_chart(fig_sales_total_children, use_container_width=True)
+        else:
+            st.warning("TotalChildren data is not available.")
+
+        # Bar Chart: Number of SalesOrders vs TotalChildren
+        with col2:
+            st.write("**Number of SalesOrders vs TotalChildren**")
+            if 'TotalChildren' in df.columns:
+                total_children_orders = df.groupby('TotalChildren').agg({'SalesOrderNumber': 'nunique'}).reset_index()
+                total_children_orders.columns = ['TotalChildren', 'NumSalesOrders']
+                total_children_orders['NumSalesOrders'] = total_children_orders['NumSalesOrders'] / 1e3  # Convert to thousands
+            
+                fig_orders_total_children = px.bar(
+                    total_children_orders,
+                    x='TotalChildren',
+                    y='NumSalesOrders',
+                    #title="Number of SalesOrders vs TotalChildren",
+                    labels={'NumSalesOrders': 'Number of SalesOrders (Thousands)', 'TotalChildren': 'Total Children'}
+                )
+                fig_orders_total_children.update_layout(yaxis_tickformat=".1fK")
+                st.plotly_chart(fig_orders_total_children, use_container_width=True)
+            else:
+                st.warning("TotalChildren data is not available.")
+
+    # Add similar horizontal bar charts for Education, CommuteDistance, and Occupation as specified.
 
 def display_product_insights():
+    
+    def product_metrics():
+        from streamlit_extras.metric_cards import style_metric_cards
+        card11, card12, card13, card14, card15 = st.columns(5)
+
+        card11.metric("Sales", value=f"${df.SalesAmount.sum()/ 1e6:.1f}M", delta="Total Sales")
+        card12.metric("Orders", value=f"{df.Profit.sum()/ 1e6:.1f}M", delta="Profit")
+        card13.metric("Cost", value=f"${df.Cost.sum()/ 1e6:.1f}M", delta="Total Cost")
+        card14.metric("Freight", value=f"${df.TaxAmt.sum()/ 1e6:.1f}M", delta="Total Freight")
+        card15.metric("Product", value=f"{df.ProductName.nunique()/1e3:.1f}K", delta="Products")
+        
+
+        style_metric_cards(background_color="#dfdfdf", border_left_color="#1f66bd")
+    product_metrics()
+    
     st.subheader("Product Insights")
     if not df.empty and 'ProductCategory' in df.columns:
         fig = px.bar(df, x='ProductCategory', y='SalesAmount', title="Sales by Product Category")
