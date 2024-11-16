@@ -3,8 +3,16 @@ import pandas as pd
 import plotly.express as px
 from sklearn.cluster import KMeans
 from sklearn.preprocessing import StandardScaler
+from sklearn.model_selection import train_test_split
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import classification_report, accuracy_score
+from io import BytesIO
 from prophet import Prophet
 from prophet.plot import plot_plotly
+import pandas as pd
+import plotly.express as px
+import plotly.graph_objs as go
+import datetime as dt
 
 # Set Streamlit page configuration
 st.set_page_config(page_title="Business Analytics Dashboard", page_icon="🌍", layout="wide")
@@ -1155,38 +1163,148 @@ def display_product_insights():
 def display_segmentation():
     st.subheader("Customer Segmentation")
     if not df.empty:
+        # Select features for segmentation
         segmentation_features = st.multiselect(
-            "Select features for segmentation",
-            options=['Age', 'SalesAmount', 'Freight', 'Profit'],
-            default=['Age', 'SalesAmount']
+        "Select features for segmentation",
+        options=['Age', 'SalesAmount', 'Freight', 'Profit'],
+        default=['Age', 'SalesAmount']
+    )
+    
+    # Check if there are selected features
+    if segmentation_features:
+        # Scale features
+        scaler = StandardScaler()
+        scaled_data = scaler.fit_transform(df[segmentation_features].fillna(0))
+        
+        # Perform K-Means clustering
+        num_clusters = st.slider("Number of Clusters", min_value=2, max_value=10, value=4)
+        kmeans = KMeans(n_clusters=num_clusters, random_state=42)
+        df['Segment'] = kmeans.fit_predict(scaled_data)
+        
+        # Visualize customer segments with scatter plot
+        fig_segment = px.scatter(
+            df,
+            x=segmentation_features[0],
+            y=segmentation_features[1] if len(segmentation_features) > 1 else segmentation_features[0],
+            color='Segment',
+            title="Customer Segments",
+            labels={'Segment': 'Customer Segment'},
+            hover_data=['CustomerID', 'SalesAmount', 'Profit', 'Age']
         )
-        if segmentation_features:
-            scaler = StandardScaler()
-            scaled_data = scaler.fit_transform(df[segmentation_features].fillna(0))
-            num_clusters = st.slider("Number of Clusters", min_value=2, max_value=10, value=4)
-            kmeans = KMeans(n_clusters=num_clusters, random_state=42)
-            df['Segment'] = kmeans.fit_predict(scaled_data)
-            fig = px.scatter(
-                df, x=segmentation_features[0],
-                y=segmentation_features[1] if len(segmentation_features) > 1 else segmentation_features[0],
-                color='Segment', title="Customer Segments",
-                hover_data=['CustomerID', 'SalesAmount', 'Profit', 'Age']
-            )
-            st.plotly_chart(fig, use_container_width=True)
-        else:
-            st.warning("Please select at least one feature for segmentation.")
+        
+        st.plotly_chart(fig_segment, use_container_width=True)
+
+        # Display average metrics for each segment in a table
+        st.subheader("Segment Analysis Table")
+        segment_analysis = df.groupby('Segment').agg({
+            'SalesAmount': 'mean',
+            'Profit': 'mean',
+            'Age': 'mean',
+            'Freight': 'mean'
+        }).reset_index()
+        segment_analysis.columns = ['Segment', 'Avg SalesAmount', 'Avg Profit', 'Avg Age', 'Avg Freight']
+        
+        st.dataframe(segment_analysis)
+
+        # Add a bar chart to visualize average metrics by segment
+        st.subheader("Segment Insights Visualization")
+        fig_segment_metrics = px.bar(
+            segment_analysis,
+            x='Segment',
+            y=['Avg SalesAmount', 'Avg Profit', 'Avg Age', 'Avg Freight'],
+            title="Average Metrics by Customer Segment",
+            labels={'value': 'Average Value', 'variable': 'Metrics'},
+            barmode='group'
+        )
+        st.plotly_chart(fig_segment_metrics, use_container_width=True)
     else:
-        st.warning("Required data for Customer Segmentation is not available.")
+        st.warning("Please select at least one feature for segmentation.")
+
+    # Interpretation of segmentation's effect on sales insights
+    with st.expander("How Customer Segmentation Affects Sales Insights"):
+        st.write("""
+        **Customer segmentation** is a powerful tool that can help you better understand your customers and tailor strategies for each group. Here’s how segmentation can impact sales insights:
+
+        1. **Personalized Marketing and Promotions**:
+            - By understanding the unique needs and behaviors of each segment, businesses can tailor their marketing strategies to be more effective.
+            - For example, if one segment shows high sales and engagement with promotions, you can target similar promotions to that segment, increasing conversion rates and customer satisfaction.
+
+        2. **Product Recommendations**:
+            - Segmentation can reveal which products are more popular with certain customer groups.
+            - For instance, a segment with younger customers might prefer certain product categories, while another segment with higher average spending might be more interested in premium products.
+            - Knowing this can help optimize inventory and drive targeted product recommendations.
+
+        3. **Pricing Strategy**:
+            - Segments with different spending patterns may respond differently to pricing strategies. For example, price-sensitive segments might be more responsive to discounts, while premium segments might value quality over price.
+            - Understanding these patterns allows businesses to implement pricing strategies that maximize profitability without alienating certain customer groups.
+
+        4. **Resource Allocation**:
+            - By identifying high-value segments (e.g., those with higher average sales or profit), businesses can prioritize resources towards nurturing relationships with those segments.
+            - This could involve providing premium support, exclusive offers, or personalized experiences to retain high-value customers and increase their lifetime value.
+
+        5. **Customer Retention**:
+            - Analyzing customer segments helps identify groups with high churn rates, allowing the business to implement targeted retention strategies.
+            - For example, if a segment with lower engagement and sales is at risk of churning, the business can reach out with incentives, loyalty programs, or targeted messaging to retain those customers.
+
+        6. **Strategic Business Decisions**:
+            - By observing trends within each segment, companies can make data-driven decisions about product development, new market opportunities, or business expansion.
+            - For instance, if one segment shows high demand for a specific product type, it might be worth expanding that product line or introducing similar products.
+
+        """)
 
 def display_clv_prediction():
     st.subheader("Customer Lifetime Value (CLV) Prediction")
     if not df.empty:
+        st.subheader("Customer Lifetime Value (CLV) Prediction")
+
+        # Define CLV calculation based on historical data
+        # Here we estimate CLV as (average purchase value) * (purchase frequency) * (expected customer lifespan)
+        
+        # Average purchase value (SalesAmount per customer)
         avg_purchase_value = df.groupby('CustomerID')['SalesAmount'].mean()
+        
+        # Purchase frequency (total orders per customer)
         purchase_frequency = df.groupby('CustomerID')['SalesOrderNumber'].nunique()
-        avg_customer_lifespan = 3
+        
+        # Assuming an arbitrary customer lifespan (in years)
+        avg_customer_lifespan = 3  # You can adjust this based on your domain knowledge
+        
+        # Calculate CLV
         df['CLV'] = df['CustomerID'].map(avg_purchase_value) * df['CustomerID'].map(purchase_frequency) * avg_customer_lifespan
+        
+        # Display top customers by CLV
+        st.subheader("Top Customers by CLV")
         top_customers = df.groupby('CustomerID')['CLV'].mean().sort_values(ascending=False).head(10).reset_index()
         st.dataframe(top_customers)
+
+        # Visualization: CLV by Segment
+        st.subheader("CLV by Customer Segment")
+        if 'Segment' in df.columns:
+            clv_segment = df.groupby('Segment')['CLV'].mean().reset_index()
+            fig_clv_segment = px.bar(clv_segment, x='Segment', y='CLV', title="Average CLV by Customer Segment")
+            st.plotly_chart(fig_clv_segment, use_container_width=True)
+        else:
+            st.warning("Customer Segmentation is required to view CLV by Segment.")
+
+        # Interpretation of CLV Prediction
+        with st.expander("Understanding Customer Lifetime Value (CLV) Prediction"):
+            st.write("""
+            **Customer Lifetime Value (CLV)** is a predictive metric that estimates the total revenue a customer is likely to bring to a business over their lifetime. By analyzing past purchasing behavior, we can estimate each customer's CLV, which allows us to make informed business decisions. Here’s how CLV prediction can impact business strategy:
+
+            1. **Prioritizing High-Value Customers**:
+                - By identifying customers with high CLV, businesses can focus resources on retaining these valuable customers through personalized offers, loyalty programs, or premium support.
+
+            2. **Optimizing Marketing Spend**:
+                - With CLV prediction, businesses can tailor marketing efforts to maximize ROI. For example, spending more to acquire and retain high-CLV customers can yield greater returns than treating all customers equally.
+
+            3. **Personalizing Customer Experience**:
+                - By understanding each customer’s potential lifetime value, businesses can personalize interactions based on their value. High-CLV customers might receive exclusive offers or access to premium services.
+
+            4. **Strategic Product Development**:
+                - CLV can inform product and service development. For example, if high-CLV customers are mostly purchasing specific products, businesses can focus on expanding or enhancing these products.
+
+            
+            """)
     else:
         st.warning("No data available for CLV Prediction.")
 

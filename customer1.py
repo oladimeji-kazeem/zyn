@@ -213,6 +213,7 @@ selected_section = st.selectbox(
         "Customer Insights",
         "Product Insights",
         "Customer Segmentation",
+        "Customer Segmentation & Predictive Profiling",
         "CLV Prediction",
         "Sales Forecasting"
     ]
