@@ -866,11 +866,291 @@ def display_product_insights():
     product_metrics()
     
     st.subheader("Product Insights")
-    if not df.empty and 'ProductCategory' in df.columns:
-        fig = px.bar(df, x='ProductCategory', y='SalesAmount', title="Sales by Product Category")
-        st.plotly_chart(fig, use_container_width=True)
-    else:
-        st.warning("Required data for Product Insights is not available.")
+    # Row 1: SalesAmount and SalesOrderNumber vs ProductName
+    col1, col2 = st.columns(2)
+
+    # Horizontal Bar Chart: SalesAmount vs ProductName (Top 10)
+    with col1:
+        st.write("**Top 10 Products by SalesAmount**")
+        if 'ProductName' in df.columns:
+            product_sales = df.groupby('ProductName').agg({'SalesAmount': 'sum'}).reset_index().sort_values(by='SalesAmount', ascending=False).head(10)
+            product_sales['SalesAmount'] = product_sales['SalesAmount'] / 1e6  # Convert to millions
+            fig_sales_product = px.bar(
+                product_sales,
+                x='SalesAmount',
+                y='ProductName',
+                orientation='h',
+                #title="Top 10 Products by SalesAmount",
+                labels={'SalesAmount': 'Sales Amount (Millions)', 'ProductName': 'Product Name'}
+            )
+            fig_sales_product.update_layout(xaxis_tickformat=".2fM")
+            st.plotly_chart(fig_sales_product, use_container_width=True)
+        else:
+            st.warning("Product Name data is not available.")
+
+    # Horizontal Bar Chart: SalesOrderNumber vs ProductName (Top 10)
+    with col2:
+        st.write("**Top 10 Products by Number of SalesOrders**")
+        if 'ProductName' in df.columns:
+            product_orders = df.groupby('ProductName').agg({'SalesOrderNumber': 'nunique'}).reset_index().sort_values(by='SalesOrderNumber', ascending=False).head(10)
+            product_orders['SalesOrderNumber'] = product_orders['SalesOrderNumber'] / 1e3  # Convert to thousands
+            fig_orders_product = px.bar(
+                product_orders,
+                x='SalesOrderNumber',
+                y='ProductName',
+                orientation='h',
+                #title="Top 10 Products by Number of SalesOrders",
+                labels={'SalesOrderNumber': 'Number of SalesOrders (Thousands)', 'ProductName': 'Product Name'}
+            )
+            fig_orders_product.update_layout(xaxis_tickformat=".1fK")
+            st.plotly_chart(fig_orders_product, use_container_width=True)
+        else:
+            st.warning("Product Name data is not available.")
+    
+    # Row 2: SalesAmount and SalesOrderNumber vs ProductCategory
+    col3, col4 = st.columns(2)
+
+    # Pie Chart: SalesAmount vs ProductCategory
+    with col3:
+        st.write("**SalesAmount by ProductCategory**")
+        if 'ProductCategory' in df.columns:
+            category_sales = df.groupby('ProductCategory').agg({'SalesAmount': 'sum'}).reset_index()
+            fig_sales_category = px.pie(
+                category_sales,
+                names='ProductCategory',
+                values='SalesAmount',
+                #title="SalesAmount by ProductCategory",
+                labels={'ProductCategory': 'Product Category'},
+                hole=0
+            )
+            fig_sales_category.update_traces(textinfo='percent+label')
+            st.plotly_chart(fig_sales_category, use_container_width=True)
+        else:
+            st.warning("Product Category data is not available.")
+
+    # Doughnut Chart: SalesOrderNumber vs ProductCategory
+    with col4:
+        st.write("**Number of SalesOrders by ProductCategory**")
+        if 'ProductCategory' in df.columns:
+            category_orders = df.groupby('ProductCategory').agg({'SalesOrderNumber': 'nunique'}).reset_index()
+            fig_orders_category = px.pie(
+                category_orders,
+                names='ProductCategory',
+                values='SalesOrderNumber',
+                #title="Number of SalesOrders by ProductCategory",
+                labels={'ProductCategory': 'Product Category'},
+                hole=0.5  # Doughnut chart
+            )
+            fig_orders_category.update_traces(textinfo='percent+label')
+            st.plotly_chart(fig_orders_category, use_container_width=True)
+        else:
+            st.warning("Product Category data is not available.")
+
+    # Row 3: SalesAmount and SalesOrderNumber vs ModelName
+    col5, col6 = st.columns(2)
+
+    # Horizontal Bar Chart: SalesAmount vs ModelName (Top 10)
+    with col5:
+        st.write("**Top 10 Models by SalesAmount**")
+        if 'ModelName' in df.columns:
+            model_sales = df.groupby('ModelName').agg({'SalesAmount': 'sum'}).reset_index().sort_values(by='SalesAmount', ascending=False).head(10)
+            model_sales['SalesAmount'] = model_sales['SalesAmount'] / 1e6  # Convert to millions
+            fig_sales_model = px.bar(
+                model_sales,
+                x='SalesAmount',
+                y='ModelName',
+                orientation='h',
+                #title="Top 10 Models by SalesAmount",
+                labels={'SalesAmount': 'Sales Amount (Millions)', 'ModelName': 'Model Name'}
+            )
+            fig_sales_model.update_layout(xaxis_tickformat=".2fM")
+            st.plotly_chart(fig_sales_model, use_container_width=True)
+        else:
+            st.warning("Model Name data is not available.")
+
+    # Horizontal Bar Chart: SalesOrderNumber vs ModelName (Top 10)
+    with col6:
+        st.write("**Top 10 Models by Number of SalesOrders**")
+        if 'ModelName' in df.columns:
+            model_orders = df.groupby('ModelName').agg({'SalesOrderNumber': 'nunique'}).reset_index().sort_values(by='SalesOrderNumber', ascending=False).head(10)
+            model_orders['SalesOrderNumber'] = model_orders['SalesOrderNumber'] / 1e3  # Convert to thousands
+            fig_orders_model = px.bar(
+                model_orders,
+                x='SalesOrderNumber',
+                y='ModelName',
+                orientation='h',
+                #title="Top 10 Models by Number of SalesOrders",
+                labels={'SalesOrderNumber': 'Number of SalesOrders (Thousands)', 'ModelName': 'Model Name'}
+            )
+            fig_orders_model.update_layout(xaxis_tickformat=".1fK")
+            st.plotly_chart(fig_orders_model, use_container_width=True)
+        else:
+            st.warning("Model Name data is not available.")
+
+    # Row 4: SalesAmount and Number of SalesOrders vs Color
+    col7, col8 = st.columns(2)
+
+    # Bar Chart: SalesAmount vs Color
+    with col7:
+        st.write("**SalesAmount by Color**")
+        if 'Color' in df.columns:
+            color_sales = df.groupby('Color').agg({'SalesAmount': 'sum'}).reset_index()
+            color_sales['SalesAmount'] = color_sales['SalesAmount'] / 1e6  # Convert to millions
+            fig_sales_color = px.bar(
+                color_sales,
+                x='Color',
+                y='SalesAmount',
+                text='SalesAmount',
+                #title="SalesAmount by Color",
+                labels={'SalesAmount': 'Sales Amount (Millions)', 'Color': 'Color'}
+            )
+            fig_sales_color.update_traces(texttemplate='%{text:.2f}M', textposition='outside')
+            st.plotly_chart(fig_sales_color, use_container_width=True)
+        else:
+            st.warning("Color data is not available.")
+
+    # Bar Chart: Number of SalesOrders vs Color
+    with col8:
+        st.write("**Number of SalesOrders by Color (in Thousands)**")
+        if 'Color' in df.columns:
+            color_orders = df.groupby('Color').agg({'SalesOrderNumber': 'nunique'}).reset_index()
+            color_orders['SalesOrderNumber'] = color_orders['SalesOrderNumber'] / 1e3  # Convert to thousands
+            fig_orders_color = px.bar(
+                color_orders,
+                x='Color',
+                y='SalesOrderNumber',
+                text='SalesOrderNumber',
+                #title="Number of SalesOrders by Color",
+                labels={'SalesOrderNumber': 'Number of SalesOrders (Thousands)', 'Color': 'Color'}
+            )
+            fig_orders_color.update_traces(texttemplate='%{text:.1f}K', textposition='outside')
+            st.plotly_chart(fig_orders_color, use_container_width=True)
+        else:
+            st.warning("Color data is not available.")
+
+    # Row 5: SalesAmount and Number of SalesOrders vs Class
+    col9, col10 = st.columns(2)
+
+    # Bar Chart: SalesAmount vs Class
+    with col9:
+        st.write("**SalesAmount by Class**")
+        if 'Class' in df.columns:
+            class_sales = df.groupby('Class').agg({'SalesAmount': 'sum'}).reset_index()
+            class_sales['SalesAmount'] = class_sales['SalesAmount'] / 1e6  # Convert to millions
+            fig_sales_class = px.bar(
+                class_sales,
+                x='Class',
+                y='SalesAmount',
+                text='SalesAmount',
+                #title="SalesAmount by Class",
+                labels={'SalesAmount': 'Sales Amount (Millions)', 'Class': 'Class'}
+            )
+            fig_sales_class.update_traces(texttemplate='%{text:.2f}M', textposition='outside')
+            st.plotly_chart(fig_sales_class, use_container_width=True)
+        else:
+            st.warning("Class data is not available.")
+
+    # Bar Chart: Number of SalesOrders vs Class
+    with col10:
+        st.write("**Number of SalesOrders by Class (in Thousands)**")
+        if 'Class' in df.columns:
+            class_orders = df.groupby('Class').agg({'SalesOrderNumber': 'nunique'}).reset_index()
+            class_orders['SalesOrderNumber'] = class_orders['SalesOrderNumber'] / 1e3  # Convert to thousands
+            fig_orders_class = px.bar(
+                class_orders,
+                x='Class',
+                y='SalesOrderNumber',
+                text='SalesOrderNumber',
+                #title="Number of SalesOrders by Class",
+                labels={'SalesOrderNumber': 'Number of SalesOrders (Thousands)', 'Class': 'Class'}
+            )
+            fig_orders_class.update_traces(texttemplate='%{text:.1f}K', textposition='outside')
+            st.plotly_chart(fig_orders_class, use_container_width=True)
+        else:
+            st.warning("Class data is not available.")
+
+    # Row 6: SalesAmount and Number of SalesOrders vs Style
+    col11, col12 = st.columns(2)
+
+    # Bar Chart: SalesAmount vs Style
+    with col11:
+        st.write("**SalesAmount by Style**")
+        if 'Style' in df.columns:
+            style_sales = df.groupby('Style').agg({'SalesAmount': 'sum'}).reset_index()
+            style_sales['SalesAmount'] = style_sales['SalesAmount'] / 1e6  # Convert to millions
+            fig_sales_style = px.bar(
+                style_sales,
+                x='Style',
+                y='SalesAmount',
+                text='SalesAmount',
+                #title="SalesAmount by Style",
+                labels={'SalesAmount': 'Sales Amount (Millions)', 'Style': 'Style'}
+            )
+            fig_sales_style.update_traces(texttemplate='%{text:.2f}M', textposition='outside')
+            st.plotly_chart(fig_sales_style, use_container_width=True)
+        else:
+            st.warning("Style data is not available.")
+
+    # Bar Chart: Number of SalesOrders vs Style
+    with col12:
+        st.write("**Number of SalesOrders by Style (in Thousands)**")
+        if 'Style' in df.columns:
+            style_orders = df.groupby('Style').agg({'SalesOrderNumber': 'nunique'}).reset_index()
+            style_orders['SalesOrderNumber'] = style_orders['SalesOrderNumber'] / 1e3  # Convert to thousands
+            fig_orders_style = px.bar(
+                style_orders,
+                x='Style',
+                y='SalesOrderNumber',
+                text='SalesOrderNumber',
+                #title="Number of SalesOrders by Style",
+                labels={'SalesOrderNumber': 'Number of SalesOrders (Thousands)', 'Style': 'Style'}
+            )
+            fig_orders_style.update_traces(texttemplate='%{text:.1f}K', textposition='outside')
+            st.plotly_chart(fig_orders_style, use_container_width=True)
+        else:
+            st.warning("Style data is not available.")
+
+    # Row 7: SalesAmount and Number of SalesOrders vs ProductSubCategory
+    col13, col14 = st.columns(2)
+
+    # Horizontal Bar Chart: SalesAmount vs ProductSubCategory (Top 10)
+    with col13:
+        st.write("**Top 10 ProductSubCategories by SalesAmount**")
+        if 'ProductSubcategory' in df.columns:
+            subcategory_sales = df.groupby('ProductSubcategory').agg({'SalesAmount': 'sum'}).reset_index().sort_values(by='SalesAmount', ascending=False).head(10)
+            subcategory_sales['SalesAmount'] = subcategory_sales['SalesAmount'] / 1e6  # Convert to millions
+            fig_sales_subcategory = px.bar(
+                subcategory_sales,
+                x='SalesAmount',
+                y='ProductSubcategory',
+                orientation='h',
+                #title="Top 10 ProductSubCategories by SalesAmount",
+                labels={'SalesAmount': 'Sales Amount (Millions)', 'ProductSubcategory': 'Product SubCategory'}
+            )
+            fig_sales_subcategory.update_layout(xaxis_tickformat=".2fM")
+            st.plotly_chart(fig_sales_subcategory, use_container_width=True)
+        else:
+            st.warning("ProductSubCategory data is not available.")
+
+    # Horizontal Bar Chart: SalesOrderNumber vs ProductSubCategory (Top 10)
+    with col14:
+        st.write("**Top 10 ProductSubCategories by Number of SalesOrders**")
+        if 'ProductSubcategory' in df.columns:
+            subcategory_orders = df.groupby('ProductSubcategory').agg({'SalesOrderNumber': 'nunique'}).reset_index().sort_values(by='SalesOrderNumber', ascending=False).head(10)
+            subcategory_orders['SalesOrderNumber'] = subcategory_orders['SalesOrderNumber'] / 1e3  # Convert to thousands
+            fig_orders_subcategory = px.bar(
+                subcategory_orders,
+                x='SalesOrderNumber',
+                y='ProductSubcategory',
+                orientation='h',
+                #title="Top 10 ProductSubCategories by Number of SalesOrders",
+                labels={'SalesOrderNumber': 'Number of SalesOrders (Thousands)', 'ProductSubcategory': 'Product SubCategory'}
+            )
+            fig_orders_subcategory.update_layout(xaxis_tickformat=".1fK")
+            st.plotly_chart(fig_orders_subcategory, use_container_width=True)
+        else:
+            st.warning("ProductSubcategory data is not available.")
+
 
 def display_segmentation():
     st.subheader("Customer Segmentation")
